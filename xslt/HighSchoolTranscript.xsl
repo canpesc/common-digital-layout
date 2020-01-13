@@ -6,6 +6,8 @@
   <xsl:include href="Course.xsl" />
   <xsl:include href="AcademicSummary.xsl" />
   <xsl:include href="CredentialSummary.xsl" />
+  <xsl:include href="Formatting.xsl" />
+  <xsl:include href="Enums.xsl" />
   <xsl:template match="/">
     <div id="divTranscriptInformationHeader" >
       <label for="TranscriptInformationLabel" >
@@ -335,7 +337,7 @@
                         <xsl:call-template name="Course.AcademicGrade" />
                       </td>
                       <td >
-                        <xsl:value-of select="CourseAcademicGradeStatusCode/text()" />
+                        <xsl:call-template name="Course.GradeStatus" />
                       </td>
                       <td >
                         <xsl:value-of select="LanguageOfInstruction/LanguageCode/text()" />
