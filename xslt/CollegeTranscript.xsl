@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html" encoding="UTF-8"/>
-  <xsl:include href="TransmissionData.xsl" />
-  <xsl:include href="Student.xsl" />
-  <xsl:include href="Course.xsl" />
-  <xsl:include href="AcademicSummary.xsl" />
-  <xsl:include href="CredentialSummary.xsl" />
-  <xsl:include href="Formatting.xsl" />
-  <xsl:include href="Enums.xsl" />
+  <xsl:include href="./TransmissionData.xsl" />
+  <xsl:include href="./Student.xsl" />
+  <xsl:include href="./Course.xsl" />
+  <xsl:include href="./AcademicSummary.xsl" />
+  <xsl:include href="./CredentialSummary.xsl" />
+  <xsl:include href="./Formatting.xsl" />
+  <xsl:include href="./Enums.xsl" />
   <xsl:template match="/">
     <html>
       <head>
