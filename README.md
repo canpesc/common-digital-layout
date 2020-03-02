@@ -21,11 +21,31 @@ TODO
 
 ## Demonstrating PDF Render
 
-In order to demonstrate rendering of HTML to PDF, multiple tools can be used
+In order to demonstrate rendering of HTML to PDF, multiple tools can be used.  Here is a short list of tools available for this
 
-https://pdfshift.io/#pricing
+### pdfshift.io
 
-curl -d source="https://en.wikipedia.org/wiki/PDF" -d landscape="false" -d use_print="false" https://api.pdfshift.io/v2/convert/ -o wikipedia.pdf
+> https://pdfshift.io/
+>
+> Example usage:
+> `curl -d source="https://en.wikipedia.org/wiki/PDF" -d landscape="false" -d use_print="false" https://api.pdfshift.io/v2/convert/ -o wikipedia.pdf`
+
+### pdfcrowd.com
+
+> https://pdfcrowd.com/
+>
+> Example usage:
+> `curl -f -u demo:ce544b6ea52a5621fb9d55f8b542d14d -o "document.pdf" -F "url=https://example.com" https://api.pdfcrowd.com/convert/`
+
+### wkhtmltopdf
+
+> https://wkhtmltopdf.org/
+
+Some additional reading on generating a PDF: 
+
+* Using Javascript to generate PDF 
+<https://www.codementor.io/@amehjoseph/convert-html-css-content-to-a-sleek-multiple-page-pdf-file-using-jspdf-javascript-library-eyyz74hci>
+* <https://www.smashingmagazine.com/2019/06/create-pdf-web-application/>
 
 # Contribute & Contact Us
 To contibute or to contact us, please see https://www.pesc.org/canadian-pesc-user-group.html
@@ -38,5 +58,8 @@ To contibute or to contact us, please see https://www.pesc.org/canadian-pesc-use
 4. Propose standard
 
 # TODO
-- Find more examples of XSTL transformation tools
-- Find more samples of PDF rendering tools
+
+* [ ] Ensure all core elements are represented in vanilla transforms
+* [ ] Find more examples of XSTL transformation tools
+* [ ] Find more samples of PDF rendering tools
+* [ ] Provide different stylesheet examples
