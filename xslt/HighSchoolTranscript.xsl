@@ -5,7 +5,7 @@
   <xsl:include href="Student.xsl" />
   <xsl:include href="Course.xsl" />
   <xsl:include href="AcademicSummary.xsl" />
-  <xsl:include href="CredentialSummary.xsl" />
+  <xsl:include href="AcademicAward.xsl" />
   <xsl:include href="Formatting.xsl" />
   <xsl:include href="Enums.xsl" />
   <xsl:template match="/">

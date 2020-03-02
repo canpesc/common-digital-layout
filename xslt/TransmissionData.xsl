@@ -8,7 +8,9 @@
   <xsl:template name="TransmissionData.SourceInstitutionName">
     <xsl:value-of select="//TransmissionData/Source/Organization/OrganizationName/text()" />
   </xsl:template>
-
+  <xsl:template name="TransmissionData.RequestTrackingID">
+    <xsl:value-of select="//TransmissionData/RequestTrackingID/text()" />
+  </xsl:template>
   <xsl:template name="ContactInformation.Name">
     <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='NoteMessage']"/>
     <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='Phone']/*[local-name()='NoteMessage']"/>

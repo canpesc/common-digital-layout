@@ -5,7 +5,7 @@
   <xsl:include href="./Student.xsl" />
   <xsl:include href="./Course.xsl" />
   <xsl:include href="./AcademicSummary.xsl" />
-  <xsl:include href="./CredentialSummary.xsl" />
+  <xsl:include href="./AcademicAward.xsl" />
   <xsl:include href="./Formatting.xsl" />
   <xsl:include href="./Enums.xsl" />
   <xsl:template match="/">
@@ -53,6 +53,8 @@
             <tr>
               <td class="transcript-footer-cell">
                 <div class="footer-info">This is not an official transcript</div>
+                <div>Request Tracking ID: <xsl:call-template name="TransmissionData.RequestTrackingID" />
+                </div>
               </td>
             </tr>
           </tfoot>
@@ -206,36 +208,46 @@
                       <xsl:if test="AcademicAwardDate/text() != ''">
                         <div>
                           <xsl:if test="AcademicAwardTitle/text() != ''">
-                            <xsl:if test="position()=1">
-                              <h2>Credential Summary</h2>
-                            </xsl:if>
-                            <ul >
-                              <li>
-                                <label >Academic Award Title</label>
-                                <label >
-                                  <xsl:apply-templates select="AcademicAwardTitle"/>
-                                </label>
-                              </li>
-                            </ul>
+                            <h2>
+                              <xsl:call-template name="AcademicAward.AcademicDegreeDescription" />
+                            </h2>
                           </xsl:if>
-                          <ul >
-                            <li>
-                              <label >Award Date:</label>
-                              <label >
-                                <xsl:apply-templates select="AcademicAwardDate"/>
-                              </label>
-                            </li>
-                          </ul>
-                          <xsl:if test="AcademicAwardProgram/AcademicProgramName/text() != ''">
-                            <ul >
-                              <li>
-                                <label >Program Name:</label>
-                                <label >
+                          <table>
+                            <xsl:if test="AcademicAwardProgram/AcademicProgramName/text() != ''">
+                              <tr>
+                                <td>Program</td>
+                                <td>
                                   <xsl:apply-templates select="AcademicAwardProgram/AcademicProgramName"/>
-                                </label>
-                              </li>
-                            </ul>
-                          </xsl:if>
+                                </td>
+                              </tr>
+                            </xsl:if>
+                            <xsl:if test="AcademicAwardDate/text() != ''">
+                              <tr>
+                                <td>Award Date</td>
+                                <td>
+                                  <xsl:call-template name="AcademicAward.DateDegreeAwarded" />
+                                </td>
+                              </tr>
+                            </xsl:if>
+                            <tr>
+                              <td>Award Level</td>
+                              <td>
+                                <xsl:call-template name="AcademicAward.AcademicDegreeCode" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Honours Level</td>
+                              <td>
+                                <xsl:call-template name="AcademicAward.HonoursLevel" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Note</td>
+                              <td>
+                                <xsl:apply-templates select="AcademicAwardProgram/NoteMessage"/>
+                              </td>
+                            </tr>
+                          </table>
                         </div>
                       </xsl:if>
                     </xsl:for-each>
@@ -244,36 +256,40 @@
                       <xsl:if test="AcademicAwardDate/text() != ''">
                         <div>
                           <xsl:if test="AcademicAwardTitle/text() != ''">
-                            <xsl:if test="position()=1">
-                              <h2>Academic Awards</h2>
-                            </xsl:if>
-                            <ul >
-                              <li>
-                                <label >Award Title:</label>
-                                <label >
-                                  <xsl:apply-templates select="AcademicAwardTitle"/>
-                                </label>
-                              </li>
-                            </ul>
+                            <h2>
+                              <xsl:call-template name="AcademicAward.AcademicDegreeDescription" />
+                            </h2>
                           </xsl:if>
-                          <ul >
-                            <li>
-                              <label >Award Date:</label>
-                              <label >
-                                <xsl:apply-templates select="AcademicAwardDate"/>
-                              </label>
-                            </li>
-                          </ul>
-                          <xsl:if test="AcademicAwardProgram/AcademicProgramName/text() != ''">
-                            <ul >
-                              <li>
-                                <label >Program Name:</label>
-                                <label >
+                          <table>
+                            <xsl:if test="AcademicAwardProgram/AcademicProgramName/text() != ''">
+                              <tr>
+                                <td>Program</td>
+                                <td>
                                   <xsl:apply-templates select="AcademicAwardProgram/AcademicProgramName"/>
-                                </label>
-                              </li>
-                            </ul>
-                          </xsl:if>
+                                </td>
+                              </tr>
+                            </xsl:if>
+                            <xsl:if test="AcademicAwardDate/text() != ''">
+                              <tr>
+                                <td>Award Date</td>
+                                <td>
+                                  <xsl:call-template name="AcademicAward.DateDegreeAwarded" />
+                                </td>
+                              </tr>
+                            </xsl:if>
+                            <tr>
+                              <td>Award Level</td>
+                              <td>
+                                <xsl:call-template name="AcademicAward.AcademicDegreeCode" />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Honours Level</td>
+                              <td>
+                                <xsl:call-template name="AcademicAward.HonoursLevel" />
+                              </td>
+                            </tr>
+                          </table>
                         </div>
                       </xsl:if>
                     </xsl:for-each>
