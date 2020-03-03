@@ -17,6 +17,8 @@ This repository demonstrates primarily taking an XML file and generating HTML us
 
 ## Demonstrating the HTML Transformation
 
+In order to demonstrate generating an HTML document from a transcript XML file, multiple tools can be used.  Here is a short sample of tools that could be used
+
 TODO
 
 ## Demonstrating PDF Render
@@ -53,13 +55,18 @@ To contibute or to contact us, please see https://www.pesc.org/canadian-pesc-use
 # Plan
 
 1. Complete skeleton of XSLT sets
-2. Share with CanPESC user group
-3. Share with PESC Standards group
-4. Propose standard
+2. Provide easy-to-use demonstrable XML -> HTML -> PDF processes
+3. Share with CanPESC user group
+4. Share with PESC Standards group
+5. Propose standard
 
 # TODO
 
 * [ ] Ensure all core elements are represented in vanilla transforms
+* [ ] Localization files (i.e. move labels out of core transforms)
+* [ ] Restructure to minimize use of HTML tables
 * [ ] Find more examples of XSTL transformation tools
 * [ ] Find more samples of PDF rendering tools
 * [ ] Provide different stylesheet examples
+* [ ] Use external template file for styles
+* [ ] Add IDs to each main div/element to support greater styling options
