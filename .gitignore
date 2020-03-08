@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/src/pesctranscriptconverter/.vs
+/src/pesctranscriptconverter/bin
+/src/pesctranscriptconverter/obj

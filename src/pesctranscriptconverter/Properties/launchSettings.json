@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "pesctranscriptconverter": {
+      "commandName": "Project",
+      "commandLineArgs": "topdf \"C:\\git\\canpesc\\common-pdf-layout\\samples\\College\\collegetranscript.html\" \"C:\\git\\canpesc\\common-pdf-layout\\samples\\College\\collegetranscript.pdf\""
+    }
+  }
+}
