@@ -63,10 +63,12 @@ To contibute or to contact us, please see https://www.pesc.org/canadian-pesc-use
 # TODO
 
 * [ ] Ensure all core elements are represented in vanilla transforms
-* [ ] Localization files (i.e. move labels out of core transforms)
 * [ ] Restructure to minimize use of HTML tables
+* [ ] Add IDs to each main div/element to support greater styling options
+* [ ] Use external template file for styles
+* [ ] Provide different stylesheet examples
+* [ ] Localization files (i.e. move labels out of core transforms)
+* [ ] Add support for transcript batches (multiple transcripts per file)
 * [ ] Find more examples of XSTL transformation tools
 * [ ] Find more samples of PDF rendering tools
-* [ ] Provide different stylesheet examples
-* [ ] Use external template file for styles
-* [ ] Add IDs to each main div/element to support greater styling options
+
