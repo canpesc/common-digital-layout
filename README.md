@@ -1,5 +1,4 @@
-# common-pdf-layout
-PESC Transcript Common PDF Layout
+# PESC Transcript Common Digital Layout
 
 A toolkit to help users of the PESC transcript standards generate PDFs of transcripts they send/receive to facilitate an easy-to-read and easy-to-print layout.
 
