@@ -1,21 +1,10 @@
-<<<<<<< HEAD
 # PESC Transcript Common Digital Layout
-=======
-# common-pdf-layout
-
-PESC Transcript Common PDF Layout
->>>>>>> 18b253b... update heading levels
 
 A toolkit to help users of the PESC transcript standards generate layouts (i.e. HTML, PDF) of transcripts they send/receive to facilitate an easy-to-read and easy-to-print layout.
 
-<<<<<<< HEAD
-# Introduction 
-The goal of the CanPESC Common Digital Layout Working Group is to reduce the effort other institutions and transcript hubs to implement a transcript-to-pdf solution.  This is a common need for organizations adopting the PESC standards and it would be good to not have to reinvent the wheel!
-=======
 ## Introduction
 
-The goal of the CanPESC Common Layout Working Group is to reduce the effort other institutions and transcript hubs to implement a transcript-to-pdf solution.  This is a common need for organizations adopting the PESC standards and it would be good to not have to reinvent the wheel!
->>>>>>> 18b253b... update heading levels
+The goal of the CanPESC Common Digital Layout Working Group is to reduce the effort other institutions and transcript hubs to implement a transcript-to-pdf solution.  This is a common need for organizations adopting the PESC standards and it would be good to not have to reinvent the wheel!
 
 This repository demonstrates primarily taking an XML file and generating HTML using an XSL transform.  Combining HTML with CSS styling allows the user to create a visually appealing and printable document.
 
@@ -74,24 +63,12 @@ To contibute or to contact us, please see <https://www.pesc.org/canadian-pesc-us
 
 ## TODO
 
-<<<<<<< HEAD
-* [ ] Ensure all core elements are represented in vanilla transforms
-* [ ] Restructure to minimize use of HTML tables
-* [ ] Add IDs to each main div/element to support greater styling options
-* [ ] Use external template file for styles
-* [ ] Provide different stylesheet examples
-* [ ] Localization files (i.e. move labels out of core transforms)
-* [ ] Add support for transcript batches (multiple transcripts per file)
-* [ ] Find more examples of XSTL transformation tools
-* [ ] Find more samples of PDF rendering tools
-
-=======
 - [ ] Ensure all core elements are represented in vanilla transforms
-- [ ] Localization files (i.e. move labels out of core transforms)
 - [ ] Restructure to minimize use of HTML tables
+- [ ] Add IDs to each main div/element to support greater styling options
+- [ ] Use external template file for styles
+- [ ] Provide different stylesheet examples
+- [ ] Localization files (i.e. move labels out of core transforms)
+- [ ] Add support for transcript batches (multiple transcripts per file)
 - [ ] Find more examples of XSTL transformation tools
 - [ ] Find more samples of PDF rendering tools
-- [ ] Provide different stylesheet examples
-- [ ] Use external template file for styles
-- [ ] Add IDs to each main div/element to support greater styling options
->>>>>>> 18b253b... update heading levels
