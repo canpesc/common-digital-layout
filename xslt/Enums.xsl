@@ -17,6 +17,7 @@
     <xsl:if test="$v_enum='T'">Teaching</xsl:if>
     <xsl:if test="$v_enum='V'">Visiting Scholar</xsl:if>
   </xsl:template>
+
   <!-- Academic Awards -->
   <xsl:template name="Enums.AcademicAwardLevel" >
     <xsl:param name="v_enum"/>
@@ -48,6 +49,7 @@
     <xsl:if test="$v_enum='SecondHighest'">Second Highest Honors</xsl:if>
     <xsl:if test="$v_enum='ThirdHighest'">Third Highest Honors</xsl:if>
   </xsl:template>
+  
   <!-- Courses -->
   <xsl:template name="Enums.CourseAcademicGradeStatusCode">
     <xsl:param name="v_enum"/>

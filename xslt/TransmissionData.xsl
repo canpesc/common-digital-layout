@@ -8,6 +8,11 @@
   <xsl:template name="TransmissionData.SourceInstitutionName">
     <xsl:value-of select="//TransmissionData/Source/Organization/OrganizationName/text()" />
   </xsl:template>
+  <xsl:template name="TransmissionData.SourceInstitutionCode">
+    <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()" />
+    <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()" />
+    <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()" />
+  </xsl:template>
   <xsl:template name="TransmissionData.RequestTrackingID">
     <xsl:value-of select="//TransmissionData/RequestTrackingID/text()" />
   </xsl:template>

@@ -40,10 +40,8 @@ namespace pesctranscriptconverter
                         outputfilepath = args[2];
                         xsltPath = args[3];
 
-
                         fsIn = new FileStream(inputfilepath, FileMode.Open);
                         textReader = new StreamReader(fsIn);
-
 
                         XmlDocument xmlDocument = new XmlDocument();
                         xmlDocument.LoadXml(textReader.ReadToEnd());
@@ -72,7 +70,6 @@ namespace pesctranscriptconverter
 
                         fsIn = new FileStream(inputfilepath, FileMode.Open);
                         textReader = new StreamReader(fsIn);
-
 
                         // instantiate the html to pdf converter
                         HtmlToPdf converter = new HtmlToPdf();
@@ -108,7 +105,6 @@ namespace pesctranscriptconverter
             Console.WriteLine("Usage: pesctranscriptconvert [tohtml|topdf] inputfilepath outputfilepath [xsltfilepath]");
             Console.WriteLine("Example: pesctranscriptconvert tohtml inputfile.xml outputfile.html transform.xslt");
             Console.WriteLine("Example: pesctranscriptconvert topdf inputfile.html outputfile.pdf");
-
         }
 
         private static string TransformXMLToHTML(string inputXml, string xsltString)

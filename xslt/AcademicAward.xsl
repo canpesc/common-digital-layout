@@ -5,9 +5,11 @@
 			<xsl:with-param name="v_enum" select="AcademicAwardLevel/text()" />
 		</xsl:call-template>
 	</xsl:template>
+	
 	<xsl:template name="AcademicAward.AcademicDegreeDescription">
 		<xsl:value-of select="AcademicAwardTitle/text()" />
 	</xsl:template>
+
 	<xsl:template name="AcademicAward.HonoursLevel">
 		<xsl:call-template name="Enums.HonorsLevel">
 			<xsl:with-param name="v_enum" select="AcademicHonors/HonorsLevel/text()" />

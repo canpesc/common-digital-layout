@@ -63,18 +63,10 @@
               <td class="transcript-content-cell">
                 <div class="main">
                   <div id="transcript-information" >
-                    <h2>Transcript Information</h2>
+                    <h2><xsl:call-template name="TransmissionData.SourceInstitutionName" /></h2>
+                    <div><xsl:call-template name="TransmissionData.SourceInstitutionName" /></div>
                     <table>
-                      <tr>
-                        <th></th>
-                        <th></th>
-                      </tr>
-                      <tr>
-                        <td>Source Institution</td>
-                        <td>
-                          <xsl:call-template name="TransmissionData.SourceInstitutionName" />
-                        </td>
-                      </tr>
+
                       <tr>
                         <td>Date Received</td>
                         <td>
