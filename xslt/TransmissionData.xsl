@@ -12,16 +12,34 @@
     <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()" />
     <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()" />
     <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()" />
+    <xsl:value-of select="//TransmissionData/Source/Organization/MutuallyDefined/text()" />
   </xsl:template>
   <xsl:template name="TransmissionData.RequestTrackingID">
     <xsl:value-of select="//TransmissionData/RequestTrackingID/text()" />
   </xsl:template>
   <xsl:template name="ContactInformation.Name">
-    <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='NoteMessage']"/>
-    <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='Phone']/*[local-name()='NoteMessage']"/>
+    <xsl:value-of select="//TransmissionData/Source/Organization/Contacts/NoteMessage/text()"/>
+    <xsl:value-of select="//TransmissionData/Source/Organization/Contacts/Phone/NoteMessage/text()"/>
   </xsl:template>
   <xsl:template name="ContactInformation.Telephone">
-    <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='Phone']/*[local-name()='AreaCityCode']"/>
-    <xsl:value-of select="//*[local-name()='Source']/*[local-name()='Organization']/*[local-name()='Contacts']/*[local-name()='Phone']/*[local-name()='PhoneNumber']"/>
+    <xsl:value-of select="//TransmissionData/Source/Organization/Contacts/Phone/AreaCityCode/text()"/>
+    <xsl:value-of select="//TransmissionData/Source/Organization/Contacts/Phone/PhoneNumber/text()"/>
+  </xsl:template>
+
+  <xsl:template name="TransmissionData.DestinationInstitutionName">
+    <xsl:value-of select="//TransmissionData/Destination/Organization/OrganizationName/text()" />
+  </xsl:template>
+  <xsl:template name="TransmissionData.DestinationInstitutionCode">
+    <xsl:value-of select="//TransmissionData/Destination/Organization/CSIS/text()" />
+    <xsl:value-of select="//TransmissionData/Destination/Organization/PSIS/text()" />
+    <xsl:value-of select="//TransmissionData/Destination/Organization/USIS/text()" />
+    <xsl:value-of select="//TransmissionData/Destination/Organization/MutuallyDefined/text()" />
+  </xsl:template>
+
+  <xsl:template name="TransmissionData.Notes" >
+      <xsl:for-each select="//TransmissionData/Destination/Organization/NoteMessage">
+        <xsl:value-of select="text()" />
+    </xsl:for-each> 
+    
   </xsl:template>
 </xsl:stylesheet>

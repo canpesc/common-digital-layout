@@ -1,0 +1,105 @@
+@page {
+  size: Letter landscape;
+}
+@media print {
+  div.pagebreak {
+    height: 0;
+    page-break-before: always;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+}
+
+body, a, p, span, th, td {
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  line-height: 1;
+  margin: 2 0;
+}
+table {
+  border-collapse: collapse;
+}
+th, td {
+  padding: 2px;
+  text-align: left;
+  vertical-align: top;
+}
+div div {
+  padding: 2px; 
+  border-collapse: collapse;
+}
+h1, h2, h3, h4 {
+  margin: 0em;
+}
+h1 {
+  font-size: 1.5em;
+  line-height: 1.8em;
+  text-align: center;
+}
+h2 {
+  font-size: 1.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+h3 {
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+h4 {
+  font-size: 1.0em;
+  font-weight: bold;
+  line-height: 1.5em;
+}
+
+.logo {
+  text-align: center;
+  /* content:url("https://github.com/canpesc/common-digital-layout/raw/master/assets/brand-tst1.png");  */
+}
+.row {
+  display: flex;
+}
+.left-column {
+  flex: 30%;
+}
+.centre-column {
+  flex: 40%;
+  margin: 0 10px;
+}
+.right-column {
+  flex: 30%;
+}
+.all-columns {
+  flex: 100%;
+  margin: 0 10px;
+}
+.rounded-corners {
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  page-break-inside: avoid;
+}
+.grades-table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.grades-table th, .grades-table td {
+  border: 1px solid black;
+}
+
+#transcript-container {
+  display: table;
+  margin: auto;
+}
+#destination-institution {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#transcript-information {
+  text-align: center;
+}
+#source-institution {
+  text-align: center;
+}
+

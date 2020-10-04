@@ -63,10 +63,76 @@
     <xsl:if test="$v_enum='OtherPass'">Pass (Other)</xsl:if>
     <xsl:if test="$v_enum='PassFailFail'">Fail</xsl:if>
     <xsl:if test="$v_enum='PassFailPass'">Pass</xsl:if>
+    <xsl:if test="$v_enum='TransferNoGrade'">Transfer credit</xsl:if>
     <xsl:if test="$v_enum='Withdrew'">Withdrawn</xsl:if>
     <xsl:if test="$v_enum='WithdrewFailing'">Withdrawn (Failing)</xsl:if>
     <xsl:if test="$v_enum='WithdrewNoPenalty'">Withdrawn (No Penalty)</xsl:if>
     <xsl:if test="$v_enum='WithdrewPassing'">Withdrawn (Passing)</xsl:if>
+  </xsl:template>
+
+  <xsl:template name="Enums.CourseCreditBasis">
+    <xsl:param name="v_enum"/>
+    <xsl:if test="$v_enum='Regular'">Regular</xsl:if>
+    <xsl:if test="$v_enum='AcademicRenewal'">Academic Renewal</xsl:if>
+    <xsl:if test="$v_enum='AdvancedPlacement'">Advanced Placement</xsl:if>
+    <xsl:if test="$v_enum='AdvancedStanding'">Advanced Standing</xsl:if>
+    <xsl:if test="$v_enum='ContinuingEducation'">Continuing Education</xsl:if>
+    <xsl:if test="$v_enum='Correspondence'">Correspondence</xsl:if>
+    <xsl:if test="$v_enum='Exemption'">Exemption</xsl:if>
+    <xsl:if test="$v_enum='Equivalence'">Equivalence</xsl:if>
+    <xsl:if test="$v_enum='InternationalBaccalaureate'">International Baccalaureate</xsl:if>
+    <xsl:if test="$v_enum='Military'">Military</xsl:if>
+    <xsl:if test="$v_enum='Remedial'">Remedial</xsl:if>
+    <xsl:if test="$v_enum='CreditByExam'">Credit By Exam</xsl:if>
+    <xsl:if test="$v_enum='HighSchoolTransferCredit'">High School Transfer Credit</xsl:if>
+    <xsl:if test="$v_enum='HighSchoolCreditOnly'">High School Credit Only</xsl:if>
+    <xsl:if test="$v_enum='HighSchoolDualCredit'">High School Dual Credit</xsl:if>
+    <xsl:if test="$v_enum='JuniorHighSchoolCredit'">Junior High School Credit</xsl:if>
+    <xsl:if test="$v_enum='Major'">Major</xsl:if>
+    <xsl:if test="$v_enum='AdultBasic'">Adult Basic</xsl:if>
+  </xsl:template>
+
+  <xsl:template name="Enums.Delinquencies">
+    <xsl:param name="v_enum"/>
+    <xsl:if test="$v_enum='ExclusionAcademic'">Exclusion (Academic)</xsl:if>
+    <xsl:if test="$v_enum='ExclusionDiscipline'">Exclusion (Discipline)</xsl:if>
+    <xsl:if test="$v_enum='GoodStanding'">Student was in good standing</xsl:if>
+    <xsl:if test="$v_enum='ProbationGPA'">Student was on academic probation (because of low GPA)</xsl:if>
+    <xsl:if test="$v_enum='ProbationHours'">Student was on academic probation (deficiency in credit hours)</xsl:if>
+    <xsl:if test="$v_enum='SuspensionGPA'">Student was on academic suspension (because of low GPA)</xsl:if>
+    <xsl:if test="$v_enum='SuspensionHours'">Student was on academic suspension (deficiency in credit hours)</xsl:if>
+    <xsl:if test="$v_enum='ProbationDiscipline'">Student was on disciplinary probation</xsl:if>
+    <xsl:if test="$v_enum='SuspensionDiscipline'">Student was on disciplinary suspension</xsl:if>
+    <xsl:if test="$v_enum='Unknown'">Unknown</xsl:if>
+    <xsl:if test="$v_enum='Other'">Other</xsl:if>
+  </xsl:template>
+
+  <xsl:template name="Enums.StudentLevelCode">
+    <xsl:param name="v_enum"/>
+    <xsl:if test="$v_enum='Postsecondary'">Postsecondary</xsl:if>
+    <xsl:if test="$v_enum='PostsecondaryBachelorPreliminaryYear'">Postsecondary Bachelor/Preliminary Year</xsl:if>
+    <xsl:if test="$v_enum='NonDegree'">Non-Degree or Transient Student</xsl:if>
+    <xsl:if test="$v_enum='CollegeFirstYear'">First-year, never attended college before</xsl:if>
+    <xsl:if test="$v_enum='CollegeFirstYearAttendedBefore'">First-year, attended college before</xsl:if>
+    <xsl:if test="$v_enum='CollegeSophomore'">College Sophomore</xsl:if>
+    <xsl:if test="$v_enum='CollegeJunior'">College Junior</xsl:if>
+    <xsl:if test="$v_enum='CollegeSenior'">College Senior</xsl:if>
+    <xsl:if test="$v_enum='CollegeFifthYear'">College Fifth Year</xsl:if>
+    <xsl:if test="$v_enum='PostBaccalaureate'">Post-Baccalaureate</xsl:if>
+    <xsl:if test="$v_enum='GraduateNonDegree'">Graduate (Non-Degree)</xsl:if>
+    <xsl:if test="$v_enum='GraduateFirstYear'">Graduate First Year</xsl:if>
+    <xsl:if test="$v_enum='GraduateSecondYear'">Graduate Second Year</xsl:if>
+    <xsl:if test="$v_enum='GraduateThirdYear'">Graduate Third Year</xsl:if>
+    <xsl:if test="$v_enum='GraduateBeyondThirdYear'">Graduate Beyond Third Year</xsl:if>
+    <xsl:if test="$v_enum='Professional'">Professional</xsl:if>
+    <xsl:if test="$v_enum='ProfessionalFirstYear'">Professional First Year</xsl:if>
+    <xsl:if test="$v_enum='ProfessionalSecondYear'">Professional Second Year</xsl:if>
+    <xsl:if test="$v_enum='ProfessionalThirdYear'">Professional Third Year</xsl:if>
+    <xsl:if test="$v_enum='ProfessionalBeyondThirdYear'">Professional Beyond Third Year</xsl:if>
+    <xsl:if test="$v_enum='MastersQualifying'">Masters (Qualifying)</xsl:if>
+    <xsl:if test="$v_enum='Masters'">Masters</xsl:if>
+    <xsl:if test="$v_enum='Doctoral'">Doctoral</xsl:if>
+    <xsl:if test="$v_enum='Postdoctoral'">Post-Doctoral</xsl:if>
   </xsl:template>
 
 </xsl:stylesheet>

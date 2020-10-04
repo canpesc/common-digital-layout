@@ -27,10 +27,13 @@
 		</xsl:call-template>
 	</xsl:template>
 
-	<xsl:template name="AcademicAwardProgram.Description1">
+	<xsl:template name="AcademicAwardProgram.ProgramName">
 		<xsl:value-of select="AcademicAwardProgram/AcademicProgramName/text()" />
 	</xsl:template>
-	<xsl:template name="AcademicAwardProgram.Description2">
+	<xsl:template name="AcademicAwardProgram.ProgramType">
+		<xsl:value-of select="AcademicAwardProgram/AcademicProgramType/text()" />
+	</xsl:template>
+	<xsl:template name="AcademicAwardProgram.Note">
 		<xsl:value-of select="AcademicAwardProgram/NoteMessage/text()" />
 	</xsl:template>
 </xsl:stylesheet>

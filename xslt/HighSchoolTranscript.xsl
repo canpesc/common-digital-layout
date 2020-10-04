@@ -447,7 +447,7 @@
                       <li>
                         <label>Field of Study</label>
                         <label>
-                          <xsl:call-template name="AcademicAwardProgram.Description1" />
+                          <xsl:call-template name="AcademicAwardProgram.ProgramName" />
                         </label>
                       </li>
                     </ul>
@@ -463,7 +463,7 @@
                       <li>
                         <label>Honours/Distinction</label>
                         <label>
-                          <xsl:call-template name="AcademicAwardProgram.Description2" />
+                          <xsl:call-template name="AcademicAwardProgram.Note" />
                         </label>
                       </li>
                     </ul>

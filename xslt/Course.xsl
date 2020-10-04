@@ -8,18 +8,9 @@
   </xsl:template>
 
   <xsl:template name="Course.BasisAcademicDescription">
-    <xsl:param name="BasisAcademicRegular" />
-    <xsl:param name="BasisAcademicCreditByExam" />
-    <xsl:param name="BasisAcademicHighSchoolTransferCredit" />
-    <xsl:if test="CourseCreditBasis/text()='Regular'">
-      <xsl:value-of select="$BasisAcademicRegular"/>
-    </xsl:if>
-    <xsl:if test="CourseCreditBasis/text()='CreditByExam'">
-      <xsl:value-of select="$BasisAcademicCreditByExam"/>
-    </xsl:if>
-    <xsl:if test="CourseCreditBasis/text()='HighSchoolTransferCredit'">
-      <xsl:value-of select="$BasisAcademicHighSchoolTransferCredit"/>
-    </xsl:if>
+    <xsl:call-template name="Enums.CourseCreditBasis">
+      <xsl:with-param name="v_enum" select="CourseCreditBasis/text()"/>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template name="Course.AcademicCreditQualifier">
@@ -28,6 +19,14 @@
 
   <xsl:template name="Course.AcademicGrade">
     <xsl:value-of select="CourseAcademicGrade/text()" />
+  </xsl:template>
+
+  <xsl:template name="Course.CourseCreditUnits">
+    <xsl:value-of select="CourseCreditUnits/text()" />
+  </xsl:template>
+
+  <xsl:template name="Course.CourseCreditLevel">
+    <xsl:value-of select="CourseCreditLevel/text()" />
   </xsl:template>
 
   <xsl:template name="Course.SubjectAreaCode">
@@ -58,6 +57,10 @@
 
   <xsl:template name="Course.CourseTitle">
     <xsl:value-of select="CourseTitle/text()" />
+  </xsl:template>
+
+  <xsl:template name="Course.CourseQualityPointsEarned">
+    <xsl:value-of select="CourseQualityPointsEarned/text()" />
   </xsl:template>
 
   <xsl:template name="Course.InstitutionCode">

@@ -55,4 +55,9 @@
 			</xsl:otherwise>
 		</xsl:choose>
 	</xsl:template>
+
+	<xsl:template name="Formatting.NumericTwoDecimal">
+		<xsl:param name="code"/>
+		<xsl:value-of select="format-number($code, '#0.00', 'SummaryFormat')" />
+	</xsl:template>
 </xsl:stylesheet>
