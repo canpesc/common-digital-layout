@@ -21,8 +21,19 @@
 						<div class="left-column">
 							<div id="destination-institution">
 								<h2>Recipient</h2>
-								<p><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></p>
 								<p><span>Institution: <xsl:call-template name="TransmissionData.DestinationInstitutionName" /></span></p>
+								<xsl:choose>
+									<xsl:when test="//TransmissionData/Source/Organization/CSIS/text() != ''">
+										<p><span>CSIS: <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()"/></span></p>
+									</xsl:when>
+									<xsl:when test="//TransmissionData/Source/Organization/USIS/text() != ''">
+										<p><span>USIS: <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()"/></span></p>
+									</xsl:when>
+									<xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
+										<p><span>PSIS: <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()"/></span></p>
+									</xsl:when>
+									<xsl:otherwise><p><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></p></xsl:otherwise>
+								</xsl:choose>
 								<p><span>Reference: <xsl:call-template name="TransmissionData.RequestTrackingID" /></span></p>
 							</div>
 						</div>
@@ -30,13 +41,26 @@
 							<div id="source-institution">
 								<img class="logo"/>
 								<h1><xsl:call-template name="TransmissionData.SourceInstitutionName" /></h1>
-								<h2>ID: <xsl:call-template name="TransmissionData.SourceInstitutionCode" /></h2>
+								<h2><xsl:choose>
+									<xsl:when test="//TransmissionData/Source/Organization/CSIS/text() != ''">
+										<span>CSIS: <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()"/></span>
+									</xsl:when>
+									<xsl:when test="//TransmissionData/Source/Organization/USIS/text() != ''">
+										<span>USIS: <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()"/></span>
+									</xsl:when>
+									<xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
+										<span>PSIS: <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()"/></span>
+									</xsl:when>
+									<xsl:otherwise><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></xsl:otherwise>
+								</xsl:choose></h2>
+								<p>&#160;</p>
+								<!-- TODO: Address block -->
 								<xsl:if test="count(//TransmissionData/Source/Organization/Contacts) > 0">
 									<p><span>Contact: <xsl:call-template name="ContactInformation.Name" /></span></p>
 								</xsl:if>
-								<xsl:if test="//TransmissionData/Destination/Organization/NoteMessage/text() != ''">
-									<p><span>Legend: <xsl:call-template name="TransmissionData.Notes" /></span></p>
-								</xsl:if>
+								<xsl:for-each select="//TransmissionData/NoteMessage">
+									<p><span><xsl:value-of select="text()"/></span></p>
+								</xsl:for-each>
 							</div>
 						</div>
 						<div class="right-column">
@@ -132,35 +156,41 @@
 						<div id="academic-summary" class="right-column rounded-corners">
 							<h2>Academic Summary</h2>
 							<xsl:for-each select="//*[local-name()='Student']/*[local-name()='AcademicRecord']/*[local-name()='AcademicSummary']">
-								<div id="academic-summary-detail">
-									<h4>
+								<xsl:if test="AcademicSummaryType/text() = 'Cumulative' and GPA/GradePointAverage/text() != ''"> 
+									<h3>Cumulative GPA: <xsl:value-of select="GPA/GradePointAverage/text()"/></h3>
+								</xsl:if>
+							</xsl:for-each>
+							<xsl:for-each select="//*[local-name()='Student']/*[local-name()='AcademicRecord']/*[local-name()='AcademicSummary']">
+								<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
+									<div id="academic-summary-detail">
+									<h3>
 										<xsl:if test="AcademicSummaryLevel/text() != ''">
-											<span><xsl:value-of select="AcademicSummaryLevel/text()"/></span>
+											<xsl:value-of select="AcademicSummaryLevel/text()"/>
 										</xsl:if>
-										<xsl:if test="AcademicSummaryType/text() != ''">
-											<span>&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)</span>
+										<xsl:if test="AcademicSummaryType/text() != '' and AcademicSummaryType/text() != 'UserDefined'">
+											&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)
 										</xsl:if>
-									</h4>
+										GPA: <xsl:value-of select="GPA/GradePointAverage/text()"/>
+									</h3>
+									<xsl:for-each select="GPA">
+										<xsl:if test="GradePointAverage/text() != ''">
+											<xsl:if test="CreditHoursEarned/text() != ''">
+												<p><span>Credit Hours Earned: <xsl:value-of select="CreditHoursEarned/text()"/></span>
+												<xsl:if test="CreditUnit/text() != ''">
+													<span>&#160;&#160;Credit Unit: <xsl:value-of select="CreditUnit/text()"/></span>
+												</xsl:if>
+												</p>
+											</xsl:if>
+											<xsl:if test="NoteMessage/text() != ''">
+												<p><span>Note: <xsl:value-of select="NoteMessage/text()"/></span></p>
+											</xsl:if>
+										</xsl:if>
+									</xsl:for-each>
 									<xsl:for-each select="NoteMessage">
 										<p><span>Note: <xsl:value-of select="text()"/></span></p>
 									</xsl:for-each>
-									<xsl:for-each select="GPA">
-										<xsl:if test="NoteMessage/text() != ''">
-											<p><span>Note: <xsl:value-of select="NoteMessage/text()"/></span></p>
-										</xsl:if>
-										<xsl:if test="GradePointAverage/text() != ''">
-											<p><span>Grade Point Average: <xsl:value-of select="GradePointAverage/text()"/></span>
-												<xsl:if test="CreditUnit/text() != ''">
-												<span>&#160;&#160;Credit Unit: <xsl:value-of select="CreditUnit/text()"/></span>
-											</xsl:if>
-											</p>
-										</xsl:if>
-											<xsl:if test="CreditHoursEarned/text() != ''">
-											<p><span>Credit Hours Earned: <xsl:value-of select="CreditHoursEarned/text()"/></span></p>
-										</xsl:if>
-											
-									</xsl:for-each>
 								</div>
+								</xsl:if>	
 							</xsl:for-each>
 						</div>
 					</div>
@@ -172,11 +202,12 @@
 										<h2>Transfer Credits</h2>
 										<table class="grades-table">
 											<thead>
-												<th scope="cols" width="10%">Course Number</th>
-												<th scope="cols" width="50%">Course Title</th>
+												<th scope="cols" width="8%">Course Number</th>
+												<th scope="cols" width="42%">Course Title</th>
 												<th scope="cols" width="10%">Credit Value</th>
 												<th scope="cols" width="10%">Credit Earned</th>
 												<th scope="cols" width="10%">Grade</th>
+												<th scope="cols" width="10%">Grade Scale Code</th>
 												<th scope="cols" width="10%">Course Quality Points Earned</th>
 											</thead>
 											<xsl:for-each select="//Student/AcademicRecord/Course">
@@ -199,41 +230,45 @@
 														<xsl:call-template name="Course.AcademicGrade" />
 													</td>
 													<td>
+														<xsl:call-template name="Course.AcademicCreditQualifier" />
+													</td>
+													<td>
 														<xsl:call-template name="Course.CourseQualityPointsEarned" />
 													</td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>
-														<p><span>Notes:</span></p>
-														<xsl:for-each select="NoteMessage">
-															<p><span><xsl:value-of select="text()"/></span></p>
-														</xsl:for-each>
+														<div style="float: left;">Notes:&#160;</div>
+														<div style="float: left;">
+															<xsl:for-each select="NoteMessage">
+																<span><xsl:value-of select="text()"/></span><br />
+															</xsl:for-each>
+														</div>
 													</td>
 													<td colspan="2">
 														<xsl:if test="CourseCreditBasis/text() != ''">
-															<p><span>Credit Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span></p>
-														</xsl:if>	
-														<xsl:if test="CourseCreditLevel/text() != ''">
-															<p><span>Credit Level: <xsl:call-template name="Course.CourseCreditLevel" /></span></p>
+															<span>Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span>
 														</xsl:if>
 														<xsl:if test="CourseCreditUnits/text() != ''">
-															<p><span>Credit Units: <xsl:call-template name="Course.CourseCreditUnits" /></span></p>
+															<span>&#160;&#160;Units: <xsl:call-template name="Course.CourseCreditUnits" /></span>
+														</xsl:if>	
+														<xsl:if test="CourseCreditLevel/text() != ''">
+															<span><br/>Level: <xsl:call-template name="Course.CourseCreditLevel" /></span>
 														</xsl:if>
+														
 													</td>
-													<td colspan="2">
+													<td colspan="3">
 														<xsl:if test="CourseAcademicGradeStatusCode/text() != ''">
-															<p><span>Grade Status: <xsl:call-template name="Course.GradeStatus" /></span></p>
-														</xsl:if>
-														<xsl:if test="CourseAcademicGradeScaleCode/text() != ''">
-															<p><span>Grade Scale Code: <xsl:call-template name="Course.AcademicCreditQualifier" /></span></p>
+															<span>Grade Status: <xsl:call-template name="Course.GradeStatus" /></span><br/>
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-															<p><span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span></p>
+															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
+																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
+																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																</xsl:if>
 														</xsl:if>
-														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-															<p><span>Supplemental Grade Code: <xsl:call-template name="MKS.MarkCodeType" /></span></p>
-														</xsl:if>
+														
 													</td>
 												</tr>
 											</xsl:for-each>
@@ -262,7 +297,7 @@
 								</div>
 								<div class="centre-column">
 									<xsl:if test="count(AcademicProgram) > 0">
-										<h4>Academic Program</h4>
+										<h3>Academic Program</h3>
 										<xsl:for-each select="AcademicProgram">	
 											<xsl:if test="string-length(AcademicProgramName/text()) != 0">
 												<p><span>Field of Study: <xsl:value-of select="AcademicProgramName/text()"/></span></p>
@@ -282,7 +317,7 @@
 										</xsl:for-each>
 									</xsl:if>
 									<xsl:if test="count(AcademicAward) > 0">
-										<h4>Academic Award</h4>
+										<h3>Academic Award</h3>
 										<xsl:for-each select="AcademicAward">
 											<p>
 												<span>Credential: <xsl:call-template name="AcademicAward.AcademicDegreeDescription" />
@@ -305,50 +340,56 @@
 								</div>
 								<div class="right-column">
 									<xsl:for-each select="AcademicSummary">
-										<div id="academic-summary-detail">
-											<h4>
+										<xsl:if test="AcademicSummaryType/text() = 'Cumulative' and GPA/GradePointAverage/text() != ''"> 
+											<h3>Cumulative GPA: <xsl:value-of select="GPA/GradePointAverage/text()"/></h3>
+										</xsl:if>
+									</xsl:for-each>
+									<xsl:for-each select="AcademicSummary">
+										<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
+											<div id="academic-summary-detail">
+											<h3>
 												<xsl:if test="AcademicSummaryLevel/text() != ''">
-													<span><xsl:value-of select="AcademicSummaryLevel/text()"/></span>
+													<xsl:value-of select="AcademicSummaryLevel/text()"/>
 												</xsl:if>
-												<xsl:if test="AcademicSummaryType/text() != ''">
-													<span>&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)</span>
+												<xsl:if test="AcademicSummaryType/text() != '' and AcademicSummaryType/text() != 'UserDefined'">
+													&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)
 												</xsl:if>
-											</h4>
-											<xsl:for-each select="NoteMessage">
-												<p><span>Note: <xsl:value-of select="text()"/></span></p>
-											</xsl:for-each>
-											<xsl:if test="Delinquencies/text() != ''">
-													<span>Standing: <xsl:call-template name="Enums.Delinquencies">
-														<xsl:with-param name="v_enum" select="Delinquencies/text()" />
-													</xsl:call-template>
-													</span>
-												</xsl:if>
+												GPA: <xsl:value-of select="GPA/GradePointAverage/text()"/>
+											</h3>
 											<xsl:for-each select="GPA">
-												<xsl:if test="NoteMessage/text() != ''">
-													<p><span>Note: <xsl:value-of select="NoteMessage/text()"/></span></p>
-												</xsl:if>
 												<xsl:if test="GradePointAverage/text() != ''">
-													<p><span>Grade Point Average: <xsl:value-of select="GradePointAverage/text()"/></span>
+													<xsl:if test="CreditHoursEarned/text() != ''">
+														<p><span>Credit Hours Earned: <xsl:value-of select="CreditHoursEarned/text()"/></span>
 														<xsl:if test="CreditUnit/text() != ''">
 															<span>&#160;&#160;Credit Unit: <xsl:value-of select="CreditUnit/text()"/></span>
 														</xsl:if>
-													</p>
-												</xsl:if>
-													<xsl:if test="CreditHoursEarned/text() != ''">
-													<p><span>Credit Hours Earned: <xsl:value-of select="CreditHoursEarned/text()"/></span></p>
-												</xsl:if>
-													
-												<xsl:if test="CreditHoursForGPA/text() != ''">
-													<p><span>Credits in GPA: <xsl:value-of select="CreditHoursForGPA/text()"/></span></p>
-												</xsl:if>
-												<xsl:if test="GPARangeMinimum/text() != ''">
-													<p><span>Range Minimum: <xsl:value-of select="GPARangeMinimum/text()"/></span></p>
-												</xsl:if>
-													<xsl:if test="GPARangeMaximum/text() != ''">
-													<p><span>Range Maximum: <xsl:value-of select="GPARangeMaximum/text()"/></span></p>
+														</p>
+													</xsl:if>
+													<xsl:if test="CreditHoursForGPA/text() != ''">
+														<p><span>Credits in GPA: <xsl:value-of select="CreditHoursForGPA/text()"/></span></p>
+													</xsl:if>
+													<xsl:if test="GPARangeMinimum/text() != ''">
+														<p><span>Range Minimum: <xsl:value-of select="GPARangeMinimum/text()"/></span></p>
+													</xsl:if>
+														<xsl:if test="GPARangeMaximum/text() != ''">
+														<p><span>Range Maximum: <xsl:value-of select="GPARangeMaximum/text()"/></span></p>
+													</xsl:if>
+													<xsl:if test="NoteMessage/text() != ''">
+														<p><span>Note: <xsl:value-of select="NoteMessage/text()"/></span></p>
+													</xsl:if>
 												</xsl:if>
 											</xsl:for-each>
+											<xsl:if test="Delinquencies/text() != ''">
+												<span>Standing: <xsl:call-template name="Enums.Delinquencies">
+													<xsl:with-param name="v_enum" select="Delinquencies/text()" />
+												</xsl:call-template>
+												</span>
+											</xsl:if>
+											<xsl:for-each select="NoteMessage">
+												<p><span>Note: <xsl:value-of select="text()"/></span></p>
+											</xsl:for-each>
 										</div>
+										</xsl:if>	
 									</xsl:for-each>
 								</div>
 							</div>
@@ -358,11 +399,12 @@
 										<h2>Course Information</h2>
 										<table class="grades-table">
 											<thead>
-												<th scope="cols" width="10%">Course Number</th>
-												<th scope="cols" width="50%">Course Title</th>
+												<th scope="cols" width="8%">Course Number</th>
+												<th scope="cols" width="42%">Course Title</th>
 												<th scope="cols" width="10%">Credit Value</th>
 												<th scope="cols" width="10%">Credit Earned</th>
 												<th scope="cols" width="10%">Grade</th>
+												<th scope="cols" width="10%">Grade Scale Code</th>
 												<th scope="cols" width="10%">Course Quality Points Earned</th>
 											</thead>
 											<xsl:for-each select="Course">
@@ -385,41 +427,45 @@
 														<xsl:call-template name="Course.AcademicGrade" />
 													</td>
 													<td>
+														<xsl:call-template name="Course.AcademicCreditQualifier" />
+													</td>
+													<td>
 														<xsl:call-template name="Course.CourseQualityPointsEarned" />
 													</td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>
-														<p><span>Notes:</span></p>
-														<xsl:for-each select="NoteMessage">
-															<p><span><xsl:value-of select="text()"/></span></p>
-														</xsl:for-each>
+														<div style="float: left;">Notes:&#160;</div>
+														<div style="float: left;">
+															<xsl:for-each select="NoteMessage">
+																<span><xsl:value-of select="text()"/></span><br />
+															</xsl:for-each>
+														</div>
 													</td>
 													<td colspan="2">
 														<xsl:if test="CourseCreditBasis/text() != ''">
-															<p><span>Credit Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span></p>
-														</xsl:if>	
-														<xsl:if test="CourseCreditLevel/text() != ''">
-															<p><span>Credit Level: <xsl:call-template name="Course.CourseCreditLevel" /></span></p>
+															<span>Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span>
 														</xsl:if>
 														<xsl:if test="CourseCreditUnits/text() != ''">
-															<p><span>Credit Units: <xsl:call-template name="Course.CourseCreditUnits" /></span></p>
+															<span>&#160;&#160;Units: <xsl:call-template name="Course.CourseCreditUnits" /></span>
+														</xsl:if>	
+														<xsl:if test="CourseCreditLevel/text() != ''">
+															<span><br/>Level: <xsl:call-template name="Course.CourseCreditLevel" /></span>
 														</xsl:if>
+														
 													</td>
-													<td colspan="2">
+													<td colspan="3">
 														<xsl:if test="CourseAcademicGradeStatusCode/text() != ''">
-															<p><span>Grade Status: <xsl:call-template name="Course.GradeStatus" /></span></p>
-														</xsl:if>
-														<xsl:if test="CourseAcademicGradeScaleCode/text() != ''">
-															<p><span>Grade Scale Code: <xsl:call-template name="Course.AcademicCreditQualifier" /></span></p>
+															<span>Grade Status: <xsl:call-template name="Course.GradeStatus" /></span><br/>
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-															<p><span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span></p>
+															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
+																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
+																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																</xsl:if>
 														</xsl:if>
-														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-															<p><span>Supplemental Grade Code: <xsl:call-template name="MKS.MarkCodeType" /></span></p>
-														</xsl:if>
+														
 													</td>
 												</tr>
 											</xsl:for-each>

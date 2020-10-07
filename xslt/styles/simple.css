@@ -4,7 +4,7 @@
 @media print {
   div.pagebreak {
     height: 0;
-    page-break-before: always;
+    /* page-break-before: always; */
   }
   table {
     page-break-inside: avoid;
@@ -13,7 +13,7 @@
 
 body, a, p, span, th, td {
   font-family: Arial, sans-serif;
-  font-size: 0.9em;
+  font-size: 11px;
   line-height: 1;
   margin: 2 0;
 }
@@ -24,10 +24,6 @@ th, td {
   padding: 2px;
   text-align: left;
   vertical-align: top;
-}
-div div {
-  padding: 2px; 
-  border-collapse: collapse;
 }
 h1, h2, h3, h4 {
   margin: 0em;
@@ -60,21 +56,20 @@ h4 {
   display: flex;
 }
 .left-column {
-  flex: 30%;
+  flex: 25%;
 }
 .centre-column {
-  flex: 40%;
+  flex: 50%;
   margin: 0 10px;
 }
 .right-column {
-  flex: 30%;
+  flex: 25%;
 }
 .all-columns {
   flex: 100%;
-  margin: 0 10px;
 }
 .rounded-corners {
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px solid black;
   padding: 10px;
   margin-bottom: 10px;
@@ -87,14 +82,17 @@ h4 {
 .grades-table th, .grades-table td {
   border: 1px solid black;
 }
+.grades-table td:nth-child(1) {  
+  font-weight: bold;
+}
 
 #transcript-container {
   display: table;
   margin: auto;
 }
 #destination-institution {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 #transcript-information {
   text-align: center;

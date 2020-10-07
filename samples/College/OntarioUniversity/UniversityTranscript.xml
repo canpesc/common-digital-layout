@@ -1430,240 +1430,240 @@
 							<CourseTitle>Student Development Theory</CourseTitle>
 						</Course>
 					</AcademicSession>
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2016-05</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>18</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2016 Summer</SessionName> -->
-							<!-- <SessionBeginDate>2016-05-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2016-08-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A-</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1836H</CourseNumber> -->
-							<!-- <CourseTitle>Critical Analysis of Research in Higher Education</CourseTitle> -->
-						<!-- </Course> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1847H</CourseNumber> -->
-							<!-- <CourseTitle>Human Resource and Diversity Issues in Higher Education</CourseTitle> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2017-01</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>19</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2017 Winter</SessionName> -->
-							<!-- <SessionBeginDate>2017-01-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2017-04-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1820H</CourseNumber> -->
-							<!-- <CourseTitle>Special Topics in Higher Education: Master's Level</CourseTitle> -->
-							<!-- <NoteMessage>COURSE SUBTITLE Organizational Development</NoteMessage> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2017-05</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>20</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2017 Summer</SessionName> -->
-							<!-- <SessionBeginDate>2017-05-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2017-08-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1843H</CourseNumber> -->
-							<!-- <CourseTitle>Higher Education and the Law</CourseTitle> -->
-						<!-- </Course> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>5800H</CourseNumber> -->
-							<!-- <CourseTitle>Special Topics in Higher Education: Master's Level</CourseTitle> -->
-							<!-- <NoteMessage>COURSE SUBTITLE Innovation in Higher Education</NoteMessage> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2017-09</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>21</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2017 Fall</SessionName> -->
-							<!-- <SessionBeginDate>2017-09-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2017-12-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1835H</CourseNumber> -->
-							<!-- <CourseTitle>Logics and Strategies of Case Study Research</CourseTitle> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2018-01</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>22</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2018 Winter</SessionName> -->
-							<!-- <SessionBeginDate>2018-01-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2018-04-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1828H</CourseNumber> -->
-							<!-- <CourseTitle>Evaluation in Higher Education</CourseTitle> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
-					<!-- <AcademicSession> -->
-						<!-- <AcademicSessionDetail> -->
-							<!-- <SessionDesignator>2018-05</SessionDesignator> -->
-							<!-- <SessionDesignatorSuffix>23</SessionDesignatorSuffix> -->
-							<!-- <SessionName>2018 Summer</SessionName> -->
-							<!-- <SessionBeginDate>2018-05-04</SessionBeginDate> -->
-							<!-- <SessionEndDate>2018-08-21</SessionEndDate> -->
-						<!-- </AcademicSessionDetail> -->
-						<!-- <StudentLevel> -->
-							<!-- <StudentLevelCode>Masters</StudentLevelCode> -->
-							<!-- <NoteMessage>Master of Education, Higher Education</NoteMessage> -->
-							<!-- <NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage> -->
-						<!-- </StudentLevel> -->
-						<!-- <AcademicProgram> -->
-							<!-- <AcademicProgramName>School of Graduate Studies</AcademicProgramName> -->
-						<!-- </AcademicProgram> -->
-						<!-- <Course> -->
-							<!-- <CourseCreditBasis>Regular</CourseCreditBasis> -->
-							<!-- <CourseCreditUnits>Other</CourseCreditUnits> -->
-							<!-- <CourseCreditLevel>Graduate</CourseCreditLevel> -->
-							<!-- <CourseCreditValue>0.50</CourseCreditValue> -->
-							<!-- <CourseCreditEarned>0.50</CourseCreditEarned> -->
-							<!-- <CourseSupplementalAcademicGrade> -->
-								<!-- <CourseSupplementalGrade> -->
-									<!-- <CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode> -->
-									<!-- <CourseAcademicSupplementalGrade>A+</CourseAcademicSupplementalGrade> -->
-								<!-- </CourseSupplementalGrade> -->
-							<!-- </CourseSupplementalAcademicGrade> -->
-							<!-- <CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation> -->
-							<!-- <CourseNumber>1852H</CourseNumber> -->
-							<!-- <CourseTitle>Individual Reading and Research in Higher Education:</CourseTitle> -->
-							<!-- <NoteMessage>TITLE CONTINUED Master's Level</NoteMessage> -->
-							<!-- <NoteMessage>COURSE SUBTITLE Exploring Internationalization</NoteMessage> -->
-						<!-- </Course> -->
-					<!-- </AcademicSession> -->
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2016-05</SessionDesignator>
+							<SessionDesignatorSuffix>18</SessionDesignatorSuffix>
+							<SessionName>2016 Summer</SessionName>
+							<SessionBeginDate>2016-05-04</SessionBeginDate>
+							<SessionEndDate>2016-08-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A-</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1836H</CourseNumber>
+							<CourseTitle>Critical Analysis of Research in Higher Education</CourseTitle>
+						</Course>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1847H</CourseNumber>
+							<CourseTitle>Human Resource and Diversity Issues in Higher Education</CourseTitle>
+						</Course>
+					</AcademicSession>
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2017-01</SessionDesignator>
+							<SessionDesignatorSuffix>19</SessionDesignatorSuffix>
+							<SessionName>2017 Winter</SessionName>
+							<SessionBeginDate>2017-01-04</SessionBeginDate>
+							<SessionEndDate>2017-04-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1820H</CourseNumber>
+							<CourseTitle>Special Topics in Higher Education: Master's Level</CourseTitle>
+							<NoteMessage>COURSE SUBTITLE Organizational Development</NoteMessage>
+						</Course>
+					</AcademicSession>
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2017-05</SessionDesignator>
+							<SessionDesignatorSuffix>20</SessionDesignatorSuffix>
+							<SessionName>2017 Summer</SessionName>
+							<SessionBeginDate>2017-05-04</SessionBeginDate>
+							<SessionEndDate>2017-08-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1843H</CourseNumber>
+							<CourseTitle>Higher Education and the Law</CourseTitle>
+						</Course>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>5800H</CourseNumber>
+							<CourseTitle>Special Topics in Higher Education: Master's Level</CourseTitle>
+							<NoteMessage>COURSE SUBTITLE Innovation in Higher Education</NoteMessage>
+						</Course>
+					</AcademicSession>
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2017-09</SessionDesignator>
+							<SessionDesignatorSuffix>21</SessionDesignatorSuffix>
+							<SessionName>2017 Fall</SessionName>
+							<SessionBeginDate>2017-09-04</SessionBeginDate>
+							<SessionEndDate>2017-12-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1835H</CourseNumber>
+							<CourseTitle>Logics and Strategies of Case Study Research</CourseTitle>
+						</Course>
+					</AcademicSession>
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2018-01</SessionDesignator>
+							<SessionDesignatorSuffix>22</SessionDesignatorSuffix>
+							<SessionName>2018 Winter</SessionName>
+							<SessionBeginDate>2018-01-04</SessionBeginDate>
+							<SessionEndDate>2018-04-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1828H</CourseNumber>
+							<CourseTitle>Evaluation in Higher Education</CourseTitle>
+						</Course>
+					</AcademicSession>
+					<AcademicSession>
+						<AcademicSessionDetail>
+							<SessionDesignator>2018-05</SessionDesignator>
+							<SessionDesignatorSuffix>23</SessionDesignatorSuffix>
+							<SessionName>2018 Summer</SessionName>
+							<SessionBeginDate>2018-05-04</SessionBeginDate>
+							<SessionEndDate>2018-08-21</SessionEndDate>
+						</AcademicSessionDetail>
+						<StudentLevel>
+							<StudentLevelCode>Masters</StudentLevelCode>
+							<NoteMessage>Master of Education, Higher Education</NoteMessage>
+							<NoteMessage>PROGRAM CONT'D  Department of Leadership, Higher and Adult Education</NoteMessage>
+						</StudentLevel>
+						<AcademicProgram>
+							<AcademicProgramName>School of Graduate Studies</AcademicProgramName>
+						</AcademicProgram>
+						<Course>
+							<CourseCreditBasis>Regular</CourseCreditBasis>
+							<CourseCreditUnits>Other</CourseCreditUnits>
+							<CourseCreditLevel>Graduate</CourseCreditLevel>
+							<CourseCreditValue>0.50</CourseCreditValue>
+							<CourseCreditEarned>0.50</CourseCreditEarned>
+							<CourseSupplementalAcademicGrade>
+								<CourseSupplementalGrade>
+									<CourseAcademicSupplementalGradeScaleCode>15</CourseAcademicSupplementalGradeScaleCode>
+									<CourseAcademicSupplementalGrade>A+</CourseAcademicSupplementalGrade>
+								</CourseSupplementalGrade>
+							</CourseSupplementalAcademicGrade>
+							<CourseSubjectAbbreviation>LHA</CourseSubjectAbbreviation>
+							<CourseNumber>1852H</CourseNumber>
+							<CourseTitle>Individual Reading and Research in Higher Education:</CourseTitle>
+							<NoteMessage>TITLE CONTINUED Master's Level</NoteMessage>
+							<NoteMessage>COURSE SUBTITLE Exploring Internationalization</NoteMessage>
+						</Course>
+					</AcademicSession>
 				</AcademicRecord>
 			</Student>
 		</ColTrn:CollegeTranscript>
