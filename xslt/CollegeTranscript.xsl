@@ -23,14 +23,14 @@
 								<h2>Recipient</h2>
 								<p><span>Institution: <xsl:call-template name="TransmissionData.DestinationInstitutionName" /></span></p>
 								<xsl:choose>
-									<xsl:when test="//TransmissionData/Source/Organization/CSIS/text() != ''">
-										<p><span>CSIS: <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()"/></span></p>
+									<xsl:when test="//TransmissionData/Destination/Organization/CSIS/text() != ''">
+										<p><span>CSIS: <xsl:value-of select="//TransmissionData/Destination/Organization/CSIS/text()"/></span></p>
 									</xsl:when>
-									<xsl:when test="//TransmissionData/Source/Organization/USIS/text() != ''">
-										<p><span>USIS: <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()"/></span></p>
+									<xsl:when test="//TransmissionData/Destination/Organization/USIS/text() != ''">
+										<p><span>USIS: <xsl:value-of select="//TransmissionData/Destination/Organization/USIS/text()"/></span></p>
 									</xsl:when>
-									<xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
-										<p><span>PSIS: <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()"/></span></p>
+									<xsl:when test="//TransmissionData/Destination/Organization/PSIS/text() != ''">
+										<p><span>PSIS: <xsl:value-of select="//TransmissionData/Destination/Organization/PSIS/text()"/></span></p>
 									</xsl:when>
 									<xsl:otherwise><p><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></p></xsl:otherwise>
 								</xsl:choose>
