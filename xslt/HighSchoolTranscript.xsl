@@ -299,7 +299,7 @@
 														<td></td>
 														<td>
 															<xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
-																<span>&#160;&#160;School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span><br />
+																<span>School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span>
 															</xsl:if>
 															<xsl:if test="CourseInstructionSiteName/text() != ''">
 																<span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span><br />
@@ -327,15 +327,15 @@
 															</xsl:if>
 															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
 																<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
-																	<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																		<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
-																	</xsl:if>
+																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
+																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																</xsl:if>
 															</xsl:if>
-															<xsl:if test="CourseCreditLevel/text() != ''">
+															<xsl:if test="CourseCreditValue/text() != ''">
 																<span>&#160;&#160;Credit Value: <xsl:call-template name="Course.CreditValue" /></span>
 															</xsl:if>
 															<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
-																<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
+																<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span>
 															</xsl:if>
 														</td>
 													</tr>
@@ -390,7 +390,7 @@
 													<td></td>
 													<td>
 														<xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
-															<span>&#160;&#160;School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span><br />
+															<span>School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span>
 														</xsl:if>
 														<xsl:if test="CourseInstructionSiteName/text() != ''">
 															<span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span><br />
@@ -418,15 +418,15 @@
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
 															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
-																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
-																</xsl:if>
+															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
+																<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+															</xsl:if>
 														</xsl:if>
-														<xsl:if test="CourseCreditLevel/text() != ''">
+														<xsl:if test="CourseCreditValue/text() != ''">
 															<span>&#160;&#160;Credit Value: <xsl:call-template name="Course.CreditValue" /></span>
 														</xsl:if>
 														<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
-															<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
+															<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span>
 														</xsl:if>
 													</td>
 												</tr>
