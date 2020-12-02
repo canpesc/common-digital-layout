@@ -32,12 +32,12 @@
 									<xsl:when test="//TransmissionData/Destination/Organization/PSIS/text() != ''">
 										<p><span>PSIS: <xsl:value-of select="//TransmissionData/Destination/Organization/PSIS/text()"/></span></p>
 									</xsl:when>
-                  <xsl:when test="//TransmissionData/Destination/Organization/ESIS/text() != ''">
+                  					<xsl:when test="//TransmissionData/Destination/Organization/ESIS/text() != ''">
 										<p><span>PSIS: <xsl:value-of select="//TransmissionData/Destination/Organization/ESIS/text()"/></span></p>
 									</xsl:when>
 									<xsl:otherwise><p><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></p></xsl:otherwise>
 								</xsl:choose>
-								<p><span>Reference: <xsl:call-template name="TransmissionData.RequestTrackingID" /></span></p>
+								
 							</div>
 						</div>
 						<div class="centre-column  rounded-corners">
@@ -54,7 +54,7 @@
 									<xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
 										<span>PSIS: <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()"/></span>
 									</xsl:when>
-                  <xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
+                  					<xsl:when test="//TransmissionData/Source/Organization/PSIS/text() != ''">
 										<span>ESIS: <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()"/></span>
 									</xsl:when>
 									<xsl:otherwise><span>ID: <xsl:call-template name="TransmissionData.DestinationInstitutionCode" /></span></xsl:otherwise>
@@ -67,9 +67,10 @@
 								<xsl:for-each select="//TransmissionData/NoteMessage">
 									<p><span><xsl:value-of select="text()"/></span></p>
 								</xsl:for-each>
-                <xsl:for-each select="//HighSchoolTranscript/NoteMessage">
+                				<xsl:for-each select="//HighSchoolTranscript/NoteMessage">
 									<p><span><xsl:value-of select="text()"/></span></p>
 								</xsl:for-each>
+								<p><span>Reference: <xsl:call-template name="TransmissionData.RequestTrackingID" /></span></p>
 							</div>
 						</div>
 						<div class="right-column">
@@ -94,9 +95,9 @@
 							<p><span>Gender: <xsl:call-template name="StudentInformation.StudentGender"><xsl:with-param name="GenderMale" select="'Male'" /><xsl:with-param name="GenderFemale" select="'Female'" /><xsl:with-param name="GenderUnreported" select="'Unreported'" /></xsl:call-template></span></p>
 							<p><span>Student Number: <xsl:call-template name="StudentInformation.StudentID" /></span></p>
 							<p><span>Government Identifier: <xsl:call-template name="StudentInformation.GovernmentId" /></span></p>
-              <xsl:for-each select="//Student/NoteMessage">
-									<p><span>Note: <xsl:value-of select="text()"/></span></p>
-								</xsl:for-each>
+							<xsl:for-each select="//Student/NoteMessage">
+								<p><span>Note: <xsl:value-of select="text()"/></span></p>
+							</xsl:for-each>
 						</div>
 						<div id="academic-awards" class="centre-column rounded-corners">
 							<h2>Academic Awards</h2>
@@ -166,27 +167,26 @@
 							</xsl:for-each>
 						</div>
 						<div id="academic-summary" class="right-column rounded-corners">
-              <xsl:for-each select="//Student/AcademicRecord/School">
-                <xsl:if test="string-length(OrganizationName/text()) != 0">
-                  <h2>School</h2>    
-                  <p><span>School Name: <xsl:value-of select="OrganizationName/text()"/></span></p>
-                  <xsl:if test="string-length(ESIS/text()) != 0">
-                    <p><span>School ID: <xsl:value-of select="ESIS/text()"/></span></p>
-                  </xsl:if>
-                </xsl:if>
-              </xsl:for-each>
-              <xsl:for-each select="//Student/AcademicRecord/AcademicSession/School">
-                <xsl:if test="string-length(OrganizationName/text()) != 0">
-                  <h2>School</h2>    
-                  <p><span>School Name: <xsl:value-of select="OrganizationName/text()"/></span></p>
-                  <xsl:if test="string-length(ESIS/text()) != 0">
-                    <p><span>School ID: <xsl:value-of select="ESIS/text()"/></span></p>
-                  </xsl:if>
-                </xsl:if>
-              </xsl:for-each>
+							<h2>School</h2> 
+							<xsl:for-each select="//Student/AcademicRecord/School">
+								<xsl:if test="string-length(OrganizationName/text()) != 0">
+								   
+								<h3><xsl:value-of select="OrganizationName/text()"/></h3>
+									<xsl:if test="string-length(ESIS/text()) != 0">
+										<p><span>School ID: <xsl:value-of select="ESIS/text()"/></span></p>
+									</xsl:if>
+								</xsl:if>
+							</xsl:for-each>
+							<xsl:for-each select="//Student/AcademicRecord/AcademicSession/School">
+								<xsl:if test="string-length(OrganizationName/text()) != 0">
+								<h3><xsl:value-of select="OrganizationName/text()"/></h3>
+								<xsl:if test="string-length(ESIS/text()) != 0">
+									<p><span>School ID: <xsl:value-of select="ESIS/text()"/></span></p>
+								</xsl:if>
+								</xsl:if>
+							</xsl:for-each>
 						</div>
 					</div>
-
 					<xsl:for-each select="//Student/AcademicRecord/AcademicSession">
 						<div class="pagebreak" />
 						<div id="session" class="session rounded-corners">
@@ -195,32 +195,12 @@
 							</xsl:attribute>
 							<div id="session-summary" class="row">
 								<div class="left-column">
-									<h3>Session: <xsl:value-of select="AcademicSessionDetail/SessionDesignator/text()"/></h3>
-									<p><span>Start Date: <xsl:call-template name="Formatting.string_date_xml"><xsl:with-param name="date" select="AcademicSessionDetail/SessionBeginDate/text()"/></xsl:call-template></span></p>
-									<p><span>End Date: <xsl:call-template name="Formatting.string_date_xml"><xsl:with-param name="date" select="AcademicSessionDetail/SessionEndDate/text()"/></xsl:call-template></span></p>
+									
 								</div>
 								<div class="centre-column">
-									<xsl:if test="count(AcademicAward) > 0">
-										<h3>Academic Award</h3>
-										<xsl:for-each select="AcademicAward">
-											<p>
-												<span>Credential: <xsl:call-template name="AcademicAward.AcademicDegreeDescription" />
-												</span>
-											</p>
-											<p>
-												<span>Level of Credential: <xsl:call-template name="AcademicAward.AcademicDegreeCode" />
-												</span>
-											</p>
-											<p>
-												<span>Honours Level: <xsl:call-template name="AcademicAward.HonoursLevel" />
-												</span>
-											</p>
-											<p>
-												<span>Date Awarded: <xsl:call-template name="AcademicAward.DateDegreeAwarded" />
-												</span>
-											</p>
-										</xsl:for-each>
-									</xsl:if>	
+									<h3>Session: <xsl:value-of select="AcademicSessionDetail/SessionDesignator/text()"/></h3>
+									<span>Start Date: <xsl:call-template name="Formatting.string_date_xml"><xsl:with-param name="date" select="AcademicSessionDetail/SessionBeginDate/text()"/></xsl:call-template></span>
+									<span>&#160;&#160;End Date: <xsl:call-template name="Formatting.string_date_xml"><xsl:with-param name="date" select="AcademicSessionDetail/SessionEndDate/text()"/></xsl:call-template></span>
 								</div>
 								<div class="right-column">
 									<xsl:for-each select="AcademicSummary">
@@ -277,110 +257,97 @@
 									</xsl:for-each>
 								</div>
 							</div>
-              <xsl:if test="count(Course) > 0">
-							<div id="session-details" class="row">
-								<div id="session-grades" class="all-columns">
-									<div id="grades">
-										<table class="grades-table">
-											<thead>
-												<th scope="cols" width="8%">Course No</th>
-												<th scope="cols" width="42%">Course Title</th>
-												<th scope="cols" width="10%">Credit Value</th>
-												<th scope="cols" width="10%">Credit Earned</th>
-												<th scope="cols" width="10%">% Grade</th>
-												<th scope="cols" width="10%">Grade Status</th>
-												<th scope="cols" width="10%">Quality Pts</th>
-											</thead>
-											<xsl:for-each select="Course">
-												<tr>
-													<td>
-														<xsl:call-template name="Course.CourseNumber" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.CourseTitle" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.CreditValue" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.CreditsEarned" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.AcademicGrade" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.GradeStatus" />
-													</td>
-													<td>
-														<xsl:call-template name="Course.CourseQualityPointsEarned" />
-													</td>
-												</tr>
-												<tr>
-													<td></td>
-													<td>
-														<div style="float: left;">Notes:&#160;</div>
-														<div style="float: left;">
-															<xsl:for-each select="NoteMessage">
-																<span><xsl:value-of select="text()"/></span><br />
+							<xsl:if test="count(Course) > 0">
+								<div id="session-details" class="row">
+									<div id="session-grades" class="all-columns">
+										<div id="grades">
+											<table class="grades-table">
+												<thead>
+													<th scope="cols" width="8%">Course No</th>
+													<th scope="cols" width="42%">Course Title</th>
+													<th scope="cols" width="10%">Grade</th>
+													<th scope="cols" width="10%">Credit Earned</th>
+													<th scope="cols" width="10%">% Grade</th>
+													<th scope="cols" width="10%">Grade Status</th>
+													<th scope="cols" width="10%">Lang</th>
+												</thead>
+												<xsl:for-each select="Course">
+													<tr>
+														<td>
+															<xsl:call-template name="Course.CourseNumber" />
+														</td>
+														<td>
+															<xsl:call-template name="Course.CourseTitle" />
+														</td>
+														<td>
+															<xsl:call-template name="Course.HighSchoolGrade" />
+														</td>
+														<td>
+															<xsl:call-template name="Course.CreditsEarned" />
+														</td>
+														<td>
+															<xsl:call-template name="Course.AcademicGrade" />
+														</td>
+														<td>
+															<xsl:call-template name="Course.GradeStatus" />
+														</td>
+														<td>
+															<xsl:value-of select="LanguageOfInstruction/LanguageCode/text()" />
+														</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td>
+															<xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
+																<span>&#160;&#160;School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span><br />
+															</xsl:if>
+															<xsl:if test="CourseInstructionSiteName/text() != ''">
+																<span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span><br />
+															</xsl:if>
+															<span>Notes:</span> 
+															<xsl:for-each select="NoteMessage"><span><xsl:value-of select="text()"/>&#160;</span></xsl:for-each>
+															<xsl:for-each select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']">
+																<span><xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']/text()" /></span>
 															</xsl:for-each>
-                              <xsl:for-each select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']">
-																<span><xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']/text()" /></span><br />
-															</xsl:for-each>                              
-														</div>
-                              <xsl:if test="LanguageOfInstruction/LanguageCode/text() != ''">
-                                <div style="float: left;">
-                                <span>&#160;&#160;Language of Instruction: <xsl:value-of select="LanguageOfInstruction/LanguageCode/text()" />&#160;&#160;</span>
-                                </div>
-                              </xsl:if>
-                              <xsl:if test="CourseInstructionSiteName/text() != ''">
-                                <div style="float: left;">
-                                <span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span>
-                                </div>
-                              </xsl:if>
-													</td>
-													<td colspan="2">
-														<xsl:if test="CourseCreditBasis/text() != ''">
-															<span>Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span>
-														</xsl:if>
-														<xsl:if test="CourseCreditUnits/text() != ''">
-															<span>&#160;&#160;Units: <xsl:call-template name="Course.CourseCreditUnits" /></span>
-														</xsl:if>	
-                            <xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text() != ''">
-															<span>&#160;&#160;Type: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text()" /><br/></span>
-														</xsl:if>
-													</td>
-													<td colspan="2">
-                            <xsl:if test="CourseEndDate/text() != ''">
-															<span>Completion Date: <xsl:call-template name="Course.CourseDate" /></span>
-														</xsl:if>
-														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
-																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
-																</xsl:if>
-														</xsl:if>
-                            <xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
-															<span><br/>School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span>
-														</xsl:if>
-													</td>
-                          <td>
-                            <xsl:if test="CourseCreditLevel/text() != ''">
-															<span>Grade: <xsl:call-template name="Course.HighSchoolGrade" /></span>
-														</xsl:if>
-                            <xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
-															<span><br/>Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
-														</xsl:if>
-                          </td>
-												</tr>
-											</xsl:for-each>
-										</table>
+														</td>
+														<td colspan="2">
+															<xsl:if test="CourseCreditBasis/text() != ''">
+																<span>Basis: <xsl:call-template name="Course.BasisAcademicDescription" /></span>
+															</xsl:if>
+															<xsl:if test="CourseCreditUnits/text() != ''">
+																<span>&#160;&#160;Units: <xsl:call-template name="Course.CourseCreditUnits" /></span>
+															</xsl:if>	
+															<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text() != ''">
+																<span>&#160;&#160;Type: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text()" /><br/></span>
+															</xsl:if>
+														</td>
+														<td colspan="3">
+															<xsl:if test="CourseEndDate/text() != ''">
+																<span>Completed: <xsl:call-template name="Course.CourseDate" /></span>
+															</xsl:if>
+															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
+																<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
+																	<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
+																		<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																	</xsl:if>
+															</xsl:if>
+															<xsl:if test="CourseCreditLevel/text() != ''">
+																<span>&#160;&#160;Credit Value: <xsl:call-template name="Course.CreditValue" /></span>
+															</xsl:if>
+															<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
+																<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
+															</xsl:if>
+														</td>
+													</tr>
+												</xsl:for-each>
+											</table>
+										</div>
 									</div>
 								</div>
-							</div>
-              </xsl:if>
+							</xsl:if>
 						</div>
 					</xsl:for-each>	
-          <xsl:if test="count(//Student/AcademicRecord/Course) > 0">
+          			<xsl:if test="count(//Student/AcademicRecord/Course) > 0">
 						<div class="session rounded-corners">
 							<div id="nosession-credits" class="row">
 								<div id="nosession-grades" class="all-columns">
@@ -389,11 +356,11 @@
 											<thead>
 												<th scope="cols" width="8%">Course No</th>
 												<th scope="cols" width="42%">Course Title</th>
-												<th scope="cols" width="10%">Credit Value</th>
+												<th scope="cols" width="10%">Grade</th>
 												<th scope="cols" width="10%">Credit Earned</th>
 												<th scope="cols" width="10%">% Grade</th>
 												<th scope="cols" width="10%">Grade Status</th>
-												<th scope="cols" width="10%">Quality Pts</th>
+												<th scope="cols" width="10%">Lang</th>
 											</thead>
 											<xsl:for-each select="//Student/AcademicRecord/Course">
 												<tr>
@@ -404,7 +371,7 @@
 														<xsl:call-template name="Course.CourseTitle" />
 													</td>
 													<td>
-														<xsl:call-template name="Course.CreditValue" />
+														<xsl:call-template name="Course.HighSchoolGrade" />
 													</td>
 													<td>
 														<xsl:call-template name="Course.CreditsEarned" />
@@ -416,31 +383,23 @@
 														<xsl:call-template name="Course.GradeStatus" />
 													</td>
 													<td>
-														<xsl:call-template name="Course.CourseQualityPointsEarned" />
+														<xsl:value-of select="LanguageOfInstruction/LanguageCode/text()" />
 													</td>
 												</tr>
 												<tr>
 													<td></td>
 													<td>
-														<div style="float: left;">Notes:&#160;</div>
-														<div style="float: left;">
-															<xsl:for-each select="NoteMessage">
-																<span><xsl:value-of select="text()"/></span><br />
-															</xsl:for-each>
-                              <xsl:for-each select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']">
-																<span><xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']/text()" /></span><br />
-															</xsl:for-each>                              
-														</div>
-                              <xsl:if test="LanguageOfInstruction/LanguageCode/text() != ''">
-                                <div style="float: left;">
-                                <span>&#160;&#160;Language of Instruction: <xsl:value-of select="LanguageOfInstruction/LanguageCode/text()" />&#160;&#160;</span>
-                                </div>
-                              </xsl:if>
-                              <xsl:if test="CourseInstructionSiteName/text() != ''">
-                                <div style="float: left;">
-                                <span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span>
-                                </div>
-                              </xsl:if>
+														<xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
+															<span>&#160;&#160;School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span><br />
+														</xsl:if>
+														<xsl:if test="CourseInstructionSiteName/text() != ''">
+															<span>&#160;&#160;Delivery: <xsl:value-of select="CourseInstructionSiteName/text()" /></span><br />
+														</xsl:if>
+														<span>Notes:</span> 
+														<xsl:for-each select="NoteMessage"><span><xsl:value-of select="text()"/>&#160;</span></xsl:for-each>
+														<xsl:for-each select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']">
+															<span><xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseNote']/text()" /></span>
+														</xsl:for-each>
 													</td>
 													<td colspan="2">
 														<xsl:if test="CourseCreditBasis/text() != ''">
@@ -449,13 +408,13 @@
 														<xsl:if test="CourseCreditUnits/text() != ''">
 															<span>&#160;&#160;Units: <xsl:call-template name="Course.CourseCreditUnits" /></span>
 														</xsl:if>	
-                            <xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text() != ''">
+														<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text() != ''">
 															<span>&#160;&#160;Type: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='CourseType']/text()" /><br/></span>
 														</xsl:if>
 													</td>
-													<td colspan="2">
-                            <xsl:if test="CourseEndDate/text() != ''">
-															<span>Completion Date: <xsl:call-template name="Course.CourseDate" /></span>
+													<td colspan="3">
+														<xsl:if test="CourseEndDate/text() != ''">
+															<span>Completed: <xsl:call-template name="Course.CourseDate" /></span>
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
 															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
@@ -463,18 +422,13 @@
 																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
 																</xsl:if>
 														</xsl:if>
-                            <xsl:if test="CourseOverrideSchool/ESIS/text() != ''">
-															<span><br/>School ID: <xsl:value-of select="CourseOverrideSchool/ESIS/text()" /></span>
+														<xsl:if test="CourseCreditLevel/text() != ''">
+															<span>&#160;&#160;Credit Value: <xsl:call-template name="Course.CreditValue" /></span>
+														</xsl:if>
+														<xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
+															<span>&#160;&#160;Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
 														</xsl:if>
 													</td>
-                          <td>
-                            <xsl:if test="CourseCreditLevel/text() != ''">
-															<span>Grade: <xsl:call-template name="Course.HighSchoolGrade" /></span>
-														</xsl:if>
-                            <xsl:if test="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text() != ''">
-															<span><br/>Required: <xsl:value-of select="./*[local-name()='UserDefinedExtensions']/*[local-name()='HighSchoolTranscriptCourseExtensions']/*[local-name()='Compulsory']/text()" /></span><br/>
-														</xsl:if>
-                          </td>
 												</tr>
 											</xsl:for-each>
 										</table>
