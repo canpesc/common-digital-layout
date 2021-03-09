@@ -49,6 +49,10 @@ Some additional reading on generating a PDF:
 <https://www.codementor.io/@amehjoseph/convert-html-css-content-to-a-sleek-multiple-page-pdf-file-using-jspdf-javascript-library-eyyz74hci>
 - <https://www.smashingmagazine.com/2019/06/create-pdf-web-application/>
 
+## Feedback
+
+We would love to hear what you think. Complete our short questionnaire at https://forms.gle/9PiMcy7kfCLmk8V6A
+
 ## Contribute & Contact Us
 
 To contibute or to contact us, please see <https://www.pesc.org/canadian-pesc-user-group.html>
