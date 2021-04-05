@@ -10,14 +10,15 @@
         <div class="left-column">
           <div id="destination-institution">
             <h2>Recipient</h2>
+            <p><span>OCAS Application Services Inc.</span></p>
             <p><span>ID: OCAS</span></p>
-            <p><span>Institution: OCAS Application Services Inc.</span></p>
             <p><span>Reference: REF-85858585</span></p>
           </div>
         </div>
         <div class="centre-column  rounded-corners">
           <div id="source-institution"><img class="logo"><h1>Demo College</h1>
-            <h2>ID: 555555</h2>
+            <h2><span>CSIS: 555555</span></h2>
+            <p> </p>
           </div>
         </div>
         <div class="right-column">
@@ -27,8 +28,8 @@
           </div>
         </div>
       </div>
-      <div id="student-summary" class="row">
-        <div id="student-information" class="left-column rounded-corners">
+      <div id="student-summary" class="row  rounded-corners">
+        <div id="student-information" class="left-column">
           <h2>Student Information</h2>
           <p><span>Surname: Learner</span></p>
           <p><span>First Name: Test</span></p>
@@ -37,28 +38,28 @@
           <p><span>Student Number: 1111111111</span></p>
           <p><span>Government Identifier: 999999999</span></p>
         </div>
-        <div id="academic-awards" class="centre-column rounded-corners">
+        <div id="academic-awards" class="centre-column">
           <h2>Academic Awards</h2>
           <div>
             <h3>Diploma</h3>
-            <p><span>Award Date: April 24, 2018</span></p>
-            <p><span>Award Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
+            <p><span>Date Awarded: April 24, 2018</span></p>
             <p><span>Program: General Arts and Science</span><span> (Major)</span></p>
+            <p><span>Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
           </div>
           <div>
             <h3>Diploma</h3>
-            <p><span>Award Date: January 16, 2017</span></p>
-            <p><span>Award Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
+            <p><span>Date Awarded: January 16, 2017</span></p>
             <p><span>Program: Business - Marketing</span><span> (Major)</span></p>
+            <p><span>Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
           </div>
           <div>
             <h3>Ontario College Certificate</h3>
-            <p><span>Award Date: April 26, 2013</span></p>
-            <p><span>Award Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
+            <p><span>Date Awarded: April 26, 2013</span></p>
             <p><span>Program: Personal Support Worker</span><span> (Major)</span></p>
+            <p><span>Level: Postsecondary Certificate or Diploma (one year or more but less than four years)</span></p>
           </div>
         </div>
-        <div id="academic-summary" class="right-column rounded-corners">
+        <div id="academic-summary" class="right-column">
           <h2>Academic Summary</h2>
         </div>
       </div>
@@ -69,19 +70,22 @@
               <h2>Transfer Credits</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>NUTR 3001</td>
                   <td>Nutrition for Life</td>
-                  <td>
+                  <td class="course-credit">
                   </td>
                   <td>
+                  </td>
+                  <td class="course-grade">
                   </td>
                   <td>
                   </td>
@@ -91,13 +95,11 @@
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
-                    <p><span>EC</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"><span>EC</span><br></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Exemption</span></p>
-                  </td>
-                  <td colspan="2"></td>
+                  <td colspan="2"><span>Basis: Exemption</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -114,17 +116,10 @@
             <p><span>Designator: 2014-09</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: General Arts and Science</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Incomplete May Register in Next Level with Condition</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -132,144 +127,121 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>CANS 100</td>
                   <td>Canadian Studies</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>CPTR 170</td>
                   <td>Information Processing I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ECON 108</td>
                   <td>Economics I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 115</td>
                   <td>Reading &amp; Study Skills 350</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MATH 064</td>
                   <td>Intro to Arithmetic &amp; Metric System</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ACCT 007</td>
                   <td>Introduction to Accounting</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -286,17 +258,10 @@
             <p><span>Designator: 2015-01</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Business - Marketing</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Complete May Register in Next Level</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -304,144 +269,121 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>ACCT 109</td>
                   <td>Accounting Applications I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>COMM 101</td>
                   <td>Business Communication</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>CPTR 170</td>
                   <td>Information Processing I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>NGR</td>
+                  <td class="course-grade">NGR</td>
+                  <td>513</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 513</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ECON 108</td>
                   <td>Economics I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 100</td>
                   <td>Finance I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 100</td>
                   <td>Introduction to Marketing I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -458,17 +400,10 @@
             <p><span>Designator: 2015-08</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Business - Marketing</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Incomplete May Register in Next Level with Condition</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -476,144 +411,121 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>ACCT 209</td>
                   <td>Accounting Applications II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>CPTR 270</td>
                   <td>Information Processing II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ECON 208</td>
                   <td>Economics II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 286</td>
                   <td>College Literature and Communication II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 103</td>
                   <td>Marketing Applications</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MTHM 200</td>
                   <td>Statistics</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -630,17 +542,10 @@
             <p><span>Designator: 2016-01</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Business - Marketing</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Complete May Register in Next Level</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -648,144 +553,121 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>ADVG 340</td>
                   <td>Principles of Advertising</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 337</td>
                   <td>College English and Communication III</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>LAWS 325</td>
                   <td>Mercantile Law</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 300</td>
                   <td>Selling Fundamentals</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 307</td>
                   <td>Merchandise Planning</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 317</td>
                   <td>Marketing Applications</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -802,17 +684,10 @@
             <p><span>Designator: 2016-04</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Business - Marketing</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Incomplete</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -820,166 +695,139 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>BSNS 302</td>
                   <td>Credit &amp; Collection</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MATH 365</td>
                   <td>General Business Mathematics</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MGMT 362</td>
                   <td>Leadership in Organizations</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>A</td>
+                  <td class="course-grade">A</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MGMT 513</td>
                   <td>Small Business Management I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 409</td>
                   <td>Market Research</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 420</td>
                   <td>Merchandise Planning II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 430</td>
                   <td>Marketing Presentations</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -996,17 +844,10 @@
             <p><span>Designator: 2016-09</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Financial Services</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Incomplete May Register in Next Level with Condition</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -1014,166 +855,139 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>BSNS 302</td>
                   <td>Credit &amp; Collection</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ECON 420</td>
                   <td>Money and Banking</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 309</td>
                   <td>Investment in Canada</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 311</td>
                   <td>Individual Taxation</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>INSR 318</td>
                   <td>General Insurance Essentials</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MGMT 456</td>
                   <td>Human Relations in the Workplace</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>IC</td>
+                  <td class="course-grade">IC</td>
+                  <td>503</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 503</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 103</td>
                   <td>Marketing Applications</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -1190,17 +1004,10 @@
             <p><span>Designator: 2017-01</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: Financial Services</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Incomplete Required to Re-Apply</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -1208,210 +1015,175 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>BSNS 412</td>
                   <td>Credit Management</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>NGR</td>
+                  <td class="course-grade">NGR</td>
+                  <td>513</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 513</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 413</td>
                   <td>Business Communication &amp; Formal Report</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>D</td>
+                  <td class="course-grade">D</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 210</td>
                   <td>Personal Financial Planning</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 300</td>
                   <td>Taxation I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 409</td>
                   <td>Investment Management</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>FNCE 418</td>
                   <td>Retirement Planning</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>INSR 424</td>
                   <td>Life Insurance</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>LAWS 461</td>
                   <td>Ethics and Law</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>IC</td>
+                  <td class="course-grade">IC</td>
+                  <td>503</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 503</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MKTG 478</td>
                   <td>Sales and Service</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>IC</td>
+                  <td class="course-grade">IC</td>
+                  <td>503</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 503</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -1428,17 +1200,10 @@
             <p><span>Designator: 2017-09</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: General Arts and Science</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Level Incomplete May Register in Next Level with Condition</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -1446,122 +1211,103 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>ANAT 131</td>
                   <td>Anat &amp; Phys for General Arts &amp; Science 1</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>CHEM 808</td>
                   <td>General Chemistry I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 144</td>
                   <td>Survey of Western Literature</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>MATH 068</td>
                   <td>Qualifying Mathematics-Tech'n Advan</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>PHYS 806</td>
                   <td>Introductory Physics I</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>C</td>
+                  <td class="course-grade">C</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -1578,17 +1324,10 @@
             <p><span>Designator: 2018-01</span></p>
           </div>
           <div class="centre-column">
-            <h4>Academic Program</h4>
+            <h3>Academic Program</h3>
             <p><span>Field of Study: General Arts and Science</span></p>
           </div>
-          <div class="right-column">
-            <div id="academic-summary-detail">
-              <h4></h4>
-              <p><span>Note: Program Complete Diploma Awarded</span></p>
-              <p><span>Grade Point Average: 0.00</span></p>
-              <p><span>Credit Hours Earned: 0.0</span></p>
-            </div>
-          </div>
+          <div class="right-column"></div>
         </div>
         <div id="session-details" class="row">
           <div id="session-grades" class="all-columns">
@@ -1596,122 +1335,103 @@
               <h2>Course Information</h2>
               <table class="grades-table">
                 <thead>
-                  <th scope="cols" width="10%">Course Number</th>
-                  <th scope="cols" width="50%">Course Title</th>
+                  <th scope="cols" width="8%">Course Number</th>
+                  <th scope="cols" width="42%">Course Title</th>
                   <th scope="cols" width="10%">Credit Value</th>
                   <th scope="cols" width="10%">Credit Earned</th>
                   <th scope="cols" width="10%">Grade</th>
+                  <th scope="cols" width="10%">Grade Scale Code</th>
                   <th scope="cols" width="10%">Course Quality Points Earned</th>
                 </thead>
                 <tr>
                   <td>CHEM 908</td>
                   <td>General Chemistry II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>A+</td>
+                  <td class="course-grade">A+</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>ENGL 143</td>
                   <td>Grammar and Editing Skills</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>F</td>
+                  <td class="course-grade">F</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>PHRE 100</td>
                   <td>Physical Recreation</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>A</td>
+                  <td class="course-grade">A</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>PHYS 807</td>
                   <td>Introductory Physics II</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>A</td>
+                  <td class="course-grade">A</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
                 <tr>
                   <td>SPAN 111</td>
                   <td>Introductory Spanish</td>
+                  <td class="course-credit">0.0</td>
                   <td>0.0</td>
-                  <td>0.0</td>
-                  <td>B</td>
+                  <td class="course-grade">B</td>
+                  <td>04</td>
                   <td>0.0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>
-                    <p><span>Notes:</span></p>
+                    <div style="float: left;">Notes: </div>
+                    <div style="float: left;"></div>
                   </td>
-                  <td colspan="2">
-                    <p><span>Credit Basis: Regular</span></p>
-                    <p><span>Credit Level: Undergraduate</span></p>
-                    <p><span>Credit Units: Semester</span></p>
-                  </td>
-                  <td colspan="2">
-                    <p><span>Grade Scale Code: 04</span></p>
-                  </td>
+                  <td colspan="2"><span>Basis: Regular</span><span>  Units: Semester</span><span><br>Level: Undergraduate</span></td>
+                  <td colspan="3"></td>
                 </tr>
               </table>
             </div>
@@ -1719,5 +1439,6 @@
         </div>
       </div>
     </div>
+    <div id="end-of-transcript">--- End of Transcript ---</div>
   </body>
 </html>

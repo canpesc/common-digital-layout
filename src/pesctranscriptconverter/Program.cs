@@ -52,10 +52,12 @@ namespace pesctranscriptconverter
                         XslCompiledTransform xslCompiledTransform = new XslCompiledTransform();
                         XsltArgumentList xsltArgumentList = new XsltArgumentList();
 
+                        XsltSettings settings = new XsltSettings(true, false);
+
                         FileStream fs = new FileStream(outputfilepath, FileMode.Create, FileAccess.Write);
                         TextWriter writer = new StreamWriter(fs);
 
-                        xslCompiledTransform.Load(xsltPath);
+                        xslCompiledTransform.Load(xsltPath, settings, new XmlUrlResolver());
                         xslCompiledTransform.Transform(xmlDocument, xsltArgumentList, writer);
 
                         fs.Close();
@@ -80,7 +82,7 @@ namespace pesctranscriptconverter
                         HtmlToPdf converter = new HtmlToPdf();
 
                         converter.Options.PdfPageSize = PdfPageSize.Letter;
-                        converter.Options.PdfPageOrientation = PdfPageOrientation.Landscape;
+                        converter.Options.PdfPageOrientation = PdfPageOrientation.Portrait;
                         converter.Options.CssMediaType = HtmlToPdfCssMediaType.Print;
 
                         converter.Options.MarginLeft = 10;
@@ -103,15 +105,15 @@ namespace pesctranscriptconverter
                         converter.Footer.Height = 30;
 
                         // add some html content to the footer
-                        PdfHtmlSection headerHtml = new PdfHtmlSection(@"<div style=""text-align: right; width: 100%; font-size: 8pt"">Rendered by CanPESC</div>", "");
+                        PdfHtmlSection headerHtml = new PdfHtmlSection(@"<div style=""text-align: right; width: 100%; font-size: 8pt"">Rendered by/Généré par CanPESC</div>", "");
                         converter.Header.Add(headerHtml);
 
                         // page numbers can be added using a PdfTextSection object
-                        PdfTextSection text = new PdfTextSection(-10, 10, "Page {page_number} of {total_pages}  ", new System.Drawing.Font("Arial", 8));
+                        PdfTextSection text = new PdfTextSection(-10, 10, "Page {page_number} of/de {total_pages}  ", new System.Drawing.Font("Arial", 8));
                         text.HorizontalAlign = PdfTextHorizontalAlign.Right;
                         converter.Footer.Add(text);
 
-                        PdfTextSection text2 = new PdfTextSection(10, 10, "This is not an official transcript", new System.Drawing.Font("Arial", 8));
+                        PdfTextSection text2 = new PdfTextSection(10, 10, "This is not an official transcript | Ceci n'est pas une relevée de notes officielle", new System.Drawing.Font("Arial", 8));
                         text2.HorizontalAlign = PdfTextHorizontalAlign.Left;
                         converter.Footer.Add(text2);
 

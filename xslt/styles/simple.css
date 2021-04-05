@@ -70,26 +70,44 @@ h4 {
 }
 .rounded-corners {
   border-radius: 10px;
-  border: 1px solid black;
+  border: 1px solid #d0d0d0;
   padding: 10px;
   margin-bottom: 10px;
   page-break-inside: avoid;
+  background-color: #F9F9F9;
 }
 .grades-table {
   width: 100%;
   margin-bottom: 10px;
 }
 .grades-table th, .grades-table td {
-  border: 1px solid black;
+  border: 1px solid #d0d0d0;
 }
 .grades-table td:nth-child(1) {  
   font-weight: bold;
 }
-
-#transcript-container {
-  display: table;
-  margin: auto;
+.course-grade {
+  font-weight: bold;
 }
+.course-credit {
+  font-weight: bold;
+}
+
+@media only screen {
+  #transcript-container {
+    display: table;
+    margin: auto;
+    width: 800px;
+  }
+}
+@media only print {
+  #transcript-container {
+    display: table;
+    margin: auto;
+    width: 95vw;
+  }
+}
+
 #destination-institution {
   padding-left: 30px;
   padding-right: 30px;
@@ -99,5 +117,10 @@ h4 {
 }
 #source-institution {
   text-align: center;
+}
+#end-of-transcript {
+  text-align: center;
+  margin: 10px;
+  font-weight: bold;
 }
 

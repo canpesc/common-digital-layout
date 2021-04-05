@@ -19,8 +19,6 @@ This repository demonstrates primarily taking an XML file and generating HTML us
 
 In order to demonstrate generating an HTML document from a transcript XML file, multiple tools can be used.  Here is a short sample of tools that could be used
 
-
-
 ### Demonstrating PDF Render
 
 In order to demonstrate rendering of HTML to PDF, multiple tools can be used.  Here is a short list of tools available for this
@@ -51,7 +49,7 @@ Some additional reading on generating a PDF:
 
 ## Feedback
 
-We would love to hear what you think. Complete our short questionnaire at https://forms.gle/9PiMcy7kfCLmk8V6A
+We would love to hear what you think. Complete our short questionnaire at <https://forms.gle/9PiMcy7kfCLmk8V6A>
 
 ## Contribute & Contact Us
 
@@ -71,9 +69,7 @@ To contibute or to contact us, please see <https://www.pesc.org/canadian-pesc-us
 - [x] Restructure to minimize use of HTML tables
 - [x] Add IDs to each main div/element to support greater styling options
 - [x] Use external template file for styles
-- [ ] Restructure High School transcript similar to College Transcript
+- [x] Restructure High School transcript similar to College Transcript
 - [ ] Provide different stylesheet examples
-- [ ] Localization files (i.e. move labels out of core transforms)
+- [x] Localization files (i.e. move labels out of core transforms)
 - [ ] Add support for transcript batches (multiple transcripts per file)
-- [ ] Find more examples of XSTL transformation tools
-- [ ] Find more samples of PDF rendering tools

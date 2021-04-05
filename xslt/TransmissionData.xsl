@@ -12,6 +12,7 @@
     <xsl:value-of select="//TransmissionData/Source/Organization/CSIS/text()" />
     <xsl:value-of select="//TransmissionData/Source/Organization/PSIS/text()" />
     <xsl:value-of select="//TransmissionData/Source/Organization/USIS/text()" />
+    <xsl:value-of select="//TransmissionData/Source/Organization/PSID/text()" />
     <xsl:value-of select="//TransmissionData/Source/Organization/MutuallyDefined/text()" />
   </xsl:template>
   <xsl:template name="TransmissionData.RequestTrackingID">
@@ -33,6 +34,7 @@
     <xsl:value-of select="//TransmissionData/Destination/Organization/CSIS/text()" />
     <xsl:value-of select="//TransmissionData/Destination/Organization/PSIS/text()" />
     <xsl:value-of select="//TransmissionData/Destination/Organization/USIS/text()" />
+    <xsl:value-of select="//TransmissionData/Destination/Organization/PSID/text()" />
     <xsl:value-of select="//TransmissionData/Destination/Organization/MutuallyDefined/text()" />
   </xsl:template>
 
