@@ -15,8 +15,9 @@ body, a, p, span, th, td {
   font-family: Arial, sans-serif;
   font-size: 11px;
   line-height: 1;
-  margin: 2 0;
+  margin: 2px 0px 2px 0px;
 }
+
 table {
   border-collapse: collapse;
 }
@@ -91,6 +92,15 @@ h4 {
 }
 .course-credit {
   font-weight: bold;
+}
+.width-8 {
+  width: 8%;
+}
+.width-42 {
+  width: 42%;
+}
+.width-10 {
+  width: 10%;
 }
 
 @media only screen {

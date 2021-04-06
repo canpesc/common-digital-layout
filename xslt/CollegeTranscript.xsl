@@ -1,6 +1,5 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="UTF-8"/>
 	<xsl:include href="./TransmissionData.xsl" />
 	<xsl:include href="./Student.xsl" />
@@ -14,10 +13,12 @@
 	<xsl:variable name="Labels" select="document('Labels.CollegeTranscript.en-CA.xml')/Labels"/>
 
 	<xsl:template match="/">
-		<html>
+		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+		<html lang="en">
 			<head>
+				<title><xsl:call-template name="TransmissionData.SourceInstitutionName" /></title>
 				<link rel="stylesheet" href="../../../xslt/styles/simple.css"  type="text/css" media="all"/>
-				<link rel="stylesheet" href="C:\git\canpesc\common-pdf-layout\xslt\styles\simple.css"  type="text/css" media="all"/>
+				<link rel="stylesheet" href="file:///C:/git/canpesc/common-pdf-layout/xslt/styles/simple.css"  type="text/css" media="all"/>
 			</head>
 			<body>
 				<div id="transcript-container">
@@ -45,7 +46,7 @@
 						</div>
 						<div class="centre-column  rounded-corners">
 							<div id="source-institution">
-								<img class="logo"/>
+								<!-- <img class="logo" src="" alt="" /> -->
 								<h1><xsl:call-template name="TransmissionData.SourceInstitutionName" /></h1>
 								<h2><xsl:choose>
 									<xsl:when test="//TransmissionData/Source/Organization/CSIS/text() != ''">
@@ -177,6 +178,9 @@
 							<xsl:for-each select="//*[local-name()='Student']/*[local-name()='AcademicRecord']/*[local-name()='AcademicSummary']">
 								<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
 									<div id="academic-summary-detail">
+									<xsl:attribute name="id">
+										<xsl:value-of select="concat('academic-summary-detail-',position())"/>
+									</xsl:attribute>
 									<h3>
 										<xsl:if test="AcademicSummaryLevel/text() != ''">
 											<xsl:value-of select="AcademicSummaryLevel/text()"/>
@@ -211,18 +215,20 @@
 					<xsl:if test="count(//Student/AcademicRecord/Course) > 0">
 						<div class="session rounded-corners">
 							<div id="transfer-credits" class="row">
-								<div id="session-grades" class="all-columns">
+								<div id="academic-record-grades" class="all-columns">
 									<div id="grades">
 										<h2><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.Title']"/></h2>
 										<table class="grades-table">
 											<thead>
-												<th scope="cols" width="8%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CourseNumber']"/></th>
-												<th scope="cols" width="42%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CourseTitle']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CreditValue']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CreditEarned']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.Grade']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.GradeScaleCode']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CourseQualityPointsEarned']"/></th>
+												<tr> 
+													<th scope="col" class="width-8"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseNumber']"/></th>
+													<th scope="col" class="width-42"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseTitle']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditValue']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditEarned']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.Grade']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.GradeScaleCode']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseQualityPointsEarned']"/></th>
+												</tr>
 											</thead>
 											<xsl:for-each select="//Student/AcademicRecord/Course">
 												<tr>
@@ -299,6 +305,9 @@
 								<xsl:value-of select="concat('session-',position())"/>
 							</xsl:attribute>
 							<div id="session-summary" class="row">
+								<xsl:attribute name="id">
+									<xsl:value-of select="concat('session-summary-',position())"/>
+								</xsl:attribute>
 								<div class="left-column">
 									<h3><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Title']"/> <xsl:value-of select="AcademicSessionDetail/SessionName/text()"/></h3>
 									<p><span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.StartDate']"/> <xsl:call-template name="Formatting.string_date_xml"><xsl:with-param name="date" select="AcademicSessionDetail/SessionBeginDate/text()"/></xsl:call-template></span></p>
@@ -359,7 +368,7 @@
 									</xsl:for-each>
 									<xsl:for-each select="AcademicSummary">
 										<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
-											<div id="academic-summary-detail">
+											<div>
 											<h3>
 												<xsl:if test="AcademicSummaryLevel/text() != ''">
 													<xsl:value-of select="AcademicSummaryLevel/text()"/>
@@ -407,18 +416,29 @@
 								</div>
 							</div>
 							<div id="session-details" class="row">
+								<xsl:attribute name="id">
+									<xsl:value-of select="concat('session-details-',position())"/>
+								</xsl:attribute>
 								<div id="session-grades" class="all-columns">
-									<div id="grades">
+									<xsl:attribute name="id">
+										<xsl:value-of select="concat('session-grades-',position())"/>
+									</xsl:attribute>
+									<div id="session-grades-section">
+										<xsl:attribute name="id">
+											<xsl:value-of select="concat('session-grades-section-',position())"/>
+										</xsl:attribute>
 										<h2><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.Title']"/></h2>
 										<table class="grades-table">
 											<thead>
-												<th scope="cols" width="8%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseNumber']"/></th>
-												<th scope="cols" width="42%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseTitle']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditValue']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditEarned']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.Grade']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.GradeScaleCode']"/></th>
-												<th scope="cols" width="10%"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseQualityPointsEarned']"/></th>
+												<tr>
+													<th scope="col" class="width-8"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseNumber']"/></th>
+													<th scope="col" class="width-42"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseTitle']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditValue']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CreditEarned']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.Grade']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.GradeScaleCode']"/></th>
+													<th scope="col" class="width-10"><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseQualityPointsEarned']"/></th>
+												</tr>
 											</thead>
 											<xsl:for-each select="Course">
 												<tr>
