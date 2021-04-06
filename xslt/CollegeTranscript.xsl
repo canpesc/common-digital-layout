@@ -94,7 +94,7 @@
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.LastName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'LastName'" /></xsl:call-template></span></p>
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.FirstName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'FirstName'" /></xsl:call-template></span></p>
 							<xsl:if test="//*[local-name()='Student']/*[local-name()='Person']/*[local-name()='Name']/*[local-name()='MiddleName'] != ''">
-								<p><span><xsl:value-of select="$Labels/Label[@key='Student.Middle']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'MiddleName'" /></xsl:call-template></span></p>
+								<p><span><xsl:value-of select="$Labels/Label[@key='Student.MiddleName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'MiddleName'" /></xsl:call-template></span></p>
 							</xsl:if>
 							<xsl:if test="//*[local-name()='Student']/*[local-name()='Person']/*[local-name()='AlternateName']/*[local-name()='LastName'] != ''">
 								<p><span><xsl:value-of select="$Labels/Label[@key='Student.FormerLastName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'FormerLastName'" /></xsl:call-template></span></p>

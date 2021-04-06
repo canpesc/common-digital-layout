@@ -47,9 +47,9 @@
         <Birthday>08-31</Birthday>
       </Birth>
       <Name>
-        <Firstname>Sarah</Firstname>
-        <Middlename>Emma</Middlename>
-        <Lastname>Abman</Lastname>
+        <FirstName>Sarah</FirstName>
+        <MiddleName>Emma</MiddleName>
+        <LastName>Abman</LastName>
       </Name>
       <Gender>
         <Gender>Female</Gender>
