@@ -14,18 +14,19 @@
 			<!-- Month -->
 			<xsl:variable name="month" select="number(substring($date, 6, 2))"/>
 			<xsl:choose>
-				<xsl:when test="$month=1">janvier</xsl:when>
-				<xsl:when test="$month=2">février</xsl:when>
-				<xsl:when test="$month=3">mars</xsl:when>
-				<xsl:when test="$month=4">avril</xsl:when>
-				<xsl:when test="$month=5">mai</xsl:when>
-				<xsl:when test="$month=6">juin</xsl:when>
-				<xsl:when test="$month=7">juillet</xsl:when>
-				<xsl:when test="$month=8">août</xsl:when>
+				<xsl:when test="$month=1">January</xsl:when>
+				<xsl:when test="$month=2">February</xsl:when>
+				<xsl:when test="$month=3">March</xsl:when>
+				<xsl:when test="$month=4">April</xsl:when>
+				<xsl:when test="$month=5">May</xsl:when>
+				<xsl:when test="$month=6">June</xsl:when>
+				<xsl:when test="$month=7">July</xsl:when>
+				<xsl:when test="$month=8">August</xsl:when>
 				<xsl:when test="$month=9">September</xsl:when>
-				<xsl:when test="$month=10">septembre</xsl:when>
-				<xsl:when test="$month=11">novembre</xsl:when>
-				<xsl:when test="$month=12">décembre</xsl:when>
+				<xsl:when test="$month=10">October</xsl:when>
+				<xsl:when test="$month=11">November</xsl:when>
+				<xsl:when test="$month=12">December</xsl:when>
+				<xsl:otherwise>INVALID MONTH</xsl:otherwise>
 			</xsl:choose>
 			<xsl:text> </xsl:text>
 			<!-- Day -->
@@ -57,6 +58,6 @@
 
 	<xsl:template name="Formatting.NumericTwoDecimal">
 		<xsl:param name="code"/>
-		<xsl:value-of select="format-number($code, '#0,00', 'SummaryFormat')" />
+		<xsl:value-of select="format-number($code, '#0.00', 'SummaryFormat')" />
 	</xsl:template>
 </xsl:stylesheet>
