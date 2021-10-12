@@ -8,6 +8,11 @@ The goal of the CanPESC Common Digital Layout Working Group is to reduce the eff
 
 This repository demonstrates primarily taking an XML file and generating HTML using an XSL transform.  Combining HTML with CSS styling allows the user to create a visually appealing and printable document.
 
+See our whitepaper on the PESC.org website:
+
+[Electronic Transcript Data Exchange: Building Common Digital
+Layout(s) for PESC XML Transcripts](https://nebula.wsimg.com/756901b746edc14b984e33cd7f067efd?AccessKeyId=4CF7FAE11697F99C9E6B&disposition=0&alloworigin=1)
+
 ### Goals
 
 - Support High School and Post-Secondary (College) transcripts
@@ -47,29 +52,12 @@ Some additional reading on generating a PDF:
 <https://www.codementor.io/@amehjoseph/convert-html-css-content-to-a-sleek-multiple-page-pdf-file-using-jspdf-javascript-library-eyyz74hci>
 - <https://www.smashingmagazine.com/2019/06/create-pdf-web-application/>
 
-## Feedback
+## Contribute & Feedback
 
 We would love to hear what you think. Complete our short questionnaire at <https://forms.gle/9PiMcy7kfCLmk8V6A>
 
-## Contribute & Contact Us
+Also you can start a discussion or report an issue in the respective sections here in the repository.
 
-To contibute or to contact us, please see <https://www.pesc.org/canadian-pesc-user-group.html>
+## Contact Us
 
-## Plan
-
-1. Complete skeleton of XSLT sets
-2. Provide easy-to-use demonstrable XML -> HTML -> PDF processes
-3. Share with CanPESC user group
-4. Share with PESC Standards group
-5. Propose standard
-
-## TODO
-
-- [x] Ensure all core elements are represented in vanilla transforms
-- [x] Restructure to minimize use of HTML tables
-- [x] Add IDs to each main div/element to support greater styling options
-- [x] Use external template file for styles
-- [x] Restructure High School transcript similar to College Transcript
-- [ ] Provide different stylesheet examples
-- [x] Localization files (i.e. move labels out of core transforms)
-- [ ] Add support for transcript batches (multiple transcripts per file)
+To contact the CanPESC user group, please see <https://www.pesc.org/canadian-pesc-user-group.html>
