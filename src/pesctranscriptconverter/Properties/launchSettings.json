@@ -2,7 +2,7 @@
   "profiles": {
     "pesctranscriptconverter": {
       "commandName": "Project",
-      "commandLineArgs": "tohtml \"C:\\git\\canpesc\\common-pdf-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.xml\" \"C:\\git\\canpesc\\common-pdf-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.html\" \"C:\\git\\canpesc\\common-pdf-layout\\xslt\\CollegeTranscript.xsl\""
+      "commandLineArgs": "tohtml \"C:\\dev\\git\\common-digital-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.xml\" \"C:\\dev\\git\\common-digital-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.html\" \"C:\\dev\\git\\common-digital-layout\\xslt\\CollegeTranscript.xsl\""
     }
   }
 }
