@@ -37,7 +37,6 @@ h1 {
 h2 {
   font-size: 1.3em;
   line-height: 1.8em;
-  text-align: center;
 }
 h3 {
   font-size: 1.1em;
@@ -47,6 +46,10 @@ h4 {
   font-size: 1.0em;
   font-weight: bold;
   line-height: 1.5em;
+}
+
+.center {
+    text-align: center;
 }
 
 .logo {
@@ -71,18 +74,17 @@ h4 {
 }
 .rounded-corners {
   border-radius: 10px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #000000;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   page-break-inside: avoid;
   background-color: #F9F9F9;
 }
 .grades-table {
   width: 100%;
-  margin-bottom: 10px;
 }
 .grades-table th, .grades-table td {
-  border: 1px solid #d0d0d0;
+  border: 1px solid #999999;
 }
 .grades-table td:nth-child(1) {  
   font-weight: bold;
@@ -119,11 +121,15 @@ h4 {
 }
 
 #destination-institution {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 #transcript-information {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 #source-institution {
   text-align: center;

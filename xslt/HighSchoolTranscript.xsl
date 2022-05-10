@@ -7,13 +7,16 @@
 	<xsl:include href="./Course.xsl" />
 	<xsl:include href="./AcademicSummary.xsl" />
 	<xsl:include href="./AcademicAward.xsl" />
-	<xsl:include href="./Formatting.xsl" />
-	<xsl:include href="./Enums.xsl" />
+
+	<!-- Change these references to appropriate locale -->
+	<xsl:include href="./Formatting.en-CA.xsl" />
+	<xsl:include href="./Enums.en-CA.xsl" />
 	<xsl:template match="/">
 		<html>
 			<head>
+				<!-- Change for the appropriate stylesheet location (only one reference required) -->
 				<link rel="stylesheet" href="../../../xslt/styles/simple.css"  type="text/css" media="all"/>
-				<link rel="stylesheet" href="C:\git\canpesc\common-pdf-layout\xslt\styles\simple.css"  type="text/css" media="all"/>
+				<link rel="stylesheet" href="file:///C:/dev/git/common-digital-layout/xslt/styles/simple.css"  type="text/css" media="all"/>
 			</head>
 			<body>
 				<div id="transcript-container">

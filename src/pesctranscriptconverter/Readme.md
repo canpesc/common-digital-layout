@@ -45,3 +45,30 @@ Use "topdf" switch with 2 parameters:
 #### Example 
 
 `pesctranscriptconvert.exe topdf "CollegeTranscript.html" "CollegeTranscript.pdf"`
+
+#### Samples Generation
+
+cd C:\dev\git\common-digital-layout\src\pesctranscriptconverter\bin\Release\net6.0
+
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\High School\OntarioHighSchool\HighSchoolTranscript.xml" "C:\dev\git\common-digital-layout\samples\High School\OntarioHighSchool\HighSchoolTranscript.html" "C:\dev\git\common-digital-layout\xslt\HighSchoolTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\High School\OntarioHighSchool\HighSchoolTranscript.html" "C:\dev\git\common-digital-layout\samples\High School\OntarioHighSchool\HighSchoolTranscript.pdf" 
+
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript.xml" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript.html" "C:\dev\git\common-digital-layout\xslt\HighSchoolTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript.html" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript.pdf" 
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript2.xml" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript2.html" "C:\dev\git\common-digital-layout\xslt\HighSchoolTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript2.html" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript2.pdf" 
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript3.xml" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript3.html" "C:\dev\git\common-digital-layout\xslt\HighSchoolTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript3.html" "C:\dev\git\common-digital-layout\samples\High School\NovaScotiaHighSchool\NSHighSchoolTranscript3.pdf" 
+
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\College\OntarioCollege\collegetranscript.xml" "C:\dev\git\common-digital-layout\samples\College\OntarioCollege\collegetranscript.html" "C:\dev\git\common-digital-layout\xslt\CollegeTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\College\OntarioCollege\collegetranscript.html" "C:\dev\git\common-digital-layout\samples\College\OntarioCollege\collegetranscript.pdf" 
+
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript.xml" "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript.html" "C:\dev\git\common-digital-layout\xslt\CollegeTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript.html" "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript.pdf" 
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript2.xml" "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript2.html" "C:\dev\git\common-digital-layout\xslt\CollegeTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript2.html" "C:\dev\git\common-digital-layout\samples\College\OntarioUniversity\UniversityTranscript2.pdf" 
+
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript1.xml" "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript1.html" "C:\dev\git\common-digital-layout\xslt\CollegeTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript1.html" "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript1.pdf" 
+.\pesctranscriptconvert.exe tohtml "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript2.xml" "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript2.html" "C:\dev\git\common-digital-layout\xslt\CollegeTranscript.xsl"
+.\pesctranscriptconvert.exe topdf "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript2.html" "C:\dev\git\common-digital-layout\samples\College\NovaScotiaUniversity\UniversityTranscript2.pdf" 
