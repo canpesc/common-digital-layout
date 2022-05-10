@@ -10,6 +10,21 @@ namespace pesctranscriptconverter
     {
         static void Main(string[] args)
         {
+            /************************************* 
+             * PDF Conversion margin watermarks 
+             * Modify this content if so desired 
+             *************************************/
+            var pageHeaderText = "Rendered by/Généré par CanPESC";
+            var pageFooterRightText = "Page {page_number} of/de {total_pages}  ";
+            var pageFooterLeftText = "This is not an official transcript | Ceci n'est pas une relevée de notes officielle";
+
+            /************************************* 
+             * PDF Metadata 
+             * Modify this content if so desired 
+             *************************************/
+            var pdfTitle = "Post-Secondary Transcript";
+            var pdfAuthor = "CanPESC";
+
             if (args.Length < 1)
             {
                 PrintUsage();
@@ -105,15 +120,15 @@ namespace pesctranscriptconverter
                         converter.Footer.Height = 30;
 
                         // add some html content to the footer
-                        PdfHtmlSection headerHtml = new PdfHtmlSection(@"<div style=""text-align: right; width: 100%; font-size: 8pt"">Rendered by/Généré par CanPESC</div>", "");
+                        PdfHtmlSection headerHtml = new PdfHtmlSection(@$"<div style=""text-align: right; width: 100%; font-size: 8pt"">{pageHeaderText}</div>", "");
                         converter.Header.Add(headerHtml);
 
                         // page numbers can be added using a PdfTextSection object
-                        PdfTextSection text = new PdfTextSection(-10, 10, "Page {page_number} of/de {total_pages}  ", new System.Drawing.Font("Arial", 8));
+                        PdfTextSection text = new PdfTextSection(-10, 10, pageFooterRightText, new System.Drawing.Font("Arial", 8));
                         text.HorizontalAlign = PdfTextHorizontalAlign.Right;
                         converter.Footer.Add(text);
 
-                        PdfTextSection text2 = new PdfTextSection(10, 10, "This is not an official transcript | Ceci n'est pas une relevée de notes officielle", new System.Drawing.Font("Arial", 8));
+                        PdfTextSection text2 = new PdfTextSection(10, 10, pageFooterLeftText, new System.Drawing.Font("Arial", 8));
                         text2.HorizontalAlign = PdfTextHorizontalAlign.Left;
                         converter.Footer.Add(text2);
 
@@ -121,8 +136,8 @@ namespace pesctranscriptconverter
                         PdfDocument doc = converter.ConvertHtmlString(textReader.ReadToEnd());
 
                         // PDF Options - can be configured
-                        doc.DocumentInformation.Title = "College Transcript";
-                        doc.DocumentInformation.Author = "CanPESC";
+                        doc.DocumentInformation.Title = pdfTitle;
+                        doc.DocumentInformation.Author = pdfAuthor;
 
                         // save pdf document
                         doc.Save(outputfilepath);
