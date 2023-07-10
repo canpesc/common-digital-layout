@@ -22,11 +22,15 @@
   </xsl:template>
 
   <xsl:template name="Course.CourseCreditUnits">
-    <xsl:value-of select="CourseCreditUnits/text()" />
+    <xsl:call-template name="Enums.CourseCreditUnits">
+      <xsl:with-param name="v_enum" select="CourseCreditUnits/text()"/>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template name="Course.CourseCreditLevel">
-    <xsl:value-of select="CourseCreditLevel/text()" />
+    <xsl:call-template name="Enums.CourseCreditLevel">
+      <xsl:with-param name="v_enum" select="CourseCreditLevel/text()"/>
+    </xsl:call-template>
   </xsl:template>
 
   <xsl:template name="Course.SubjectAreaCode">
@@ -73,11 +77,11 @@
     </xsl:call-template>
   </xsl:template>
 
-  <xsl:template name="MKS.MarkCodeType">
+  <xsl:template name="Course.MarkCodeType">
     <xsl:value-of select="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text()" />
   </xsl:template>
   
-  <xsl:template name="MKS.AcademicGrade">
+  <xsl:template name="Course.AcademicSupplementalGrade">
     <xsl:value-of select="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text()" />
   </xsl:template>
 </xsl:stylesheet>

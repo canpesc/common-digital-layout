@@ -22,18 +22,19 @@ namespace pesctranscriptconverter
              * PDF Metadata 
              * Modify this content if so desired 
              *************************************/
-            var pdfTitle = "Post-Secondary Transcript";
+            var pdfTitle = "Common Digital Layout Transcript";
             var pdfAuthor = "CanPESC";
 
             if (args.Length < 1)
             {
                 PrintUsage();
-
             }
+
             var option = args[0];
             var inputfilepath = string.Empty;
             var outputfilepath = string.Empty;
             var xsltPath = string.Empty;
+            var locale = "en-CA";
 
             FileStream fsIn;
             TextReader textReader;
@@ -47,7 +48,7 @@ namespace pesctranscriptconverter
                 {
                     case "tohtml":
 
-                        if (args.Length != 4)
+                        if (args.Length < 4)
                         {
                             PrintUsage();
                             break;
@@ -58,14 +59,24 @@ namespace pesctranscriptconverter
                         outputfilepath = args[2];
                         xsltPath = args[3];
 
+                        if (args.Length == 5) {
+                            locale = args[4];
+                            if (locale != "en-CA" && locale != "en-US" && locale != "fr-CA") {
+                                Console.WriteLine("Locale must be either en-US, en-CA or fr-CA");
+                                PrintUsage();
+                                break;
+                            }
+                        }
+
                         fsIn = new FileStream(inputfilepath, FileMode.Open);
                         textReader = new StreamReader(fsIn);
 
                         XmlDocument xmlDocument = new XmlDocument();
                         xmlDocument.LoadXml(textReader.ReadToEnd());
 
-                        XslCompiledTransform xslCompiledTransform = new XslCompiledTransform();
+                        XslCompiledTransform xslCompiledTransform = new XslCompiledTransform(true);
                         XsltArgumentList xsltArgumentList = new XsltArgumentList();
+                        xsltArgumentList.AddParam("Locale", "", locale);
 
                         XsltSettings settings = new XsltSettings(true, false);
 
@@ -167,21 +178,6 @@ namespace pesctranscriptconverter
             Console.WriteLine("Usage: pesctranscriptconvert [tohtml|topdf] inputfilepath outputfilepath [xsltfilepath]");
             Console.WriteLine("Example: pesctranscriptconvert tohtml inputfile.xml outputfile.html transform.xslt");
             Console.WriteLine("Example: pesctranscriptconvert topdf inputfile.html outputfile.pdf");
-        }
-
-        private static string TransformXMLToHTML(string inputXml, string xsltString)
-        {
-            XslCompiledTransform transform = new XslCompiledTransform();
-            using (XmlReader reader = XmlReader.Create(new StringReader(xsltString)))
-            {
-                transform.Load(reader);
-            }
-            StringWriter results = new StringWriter();
-            using (XmlReader reader = XmlReader.Create(new StringReader(inputXml)))
-            {
-                transform.Transform(reader, null, results);
-            }
-            return results.ToString();
         }
     }
 }

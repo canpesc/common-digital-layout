@@ -1,17 +1,17 @@
 <?xml version="1.0" ?>
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="UTF-8"/>
+	<xsl:param name="Locale">en-CA</xsl:param>
 	<xsl:include href="./TransmissionData.xsl" />
 	<xsl:include href="./Student.xsl" />
 	<xsl:include href="./Course.xsl" />
 	<xsl:include href="./AcademicSummary.xsl" />
 	<xsl:include href="./AcademicAward.xsl" />
+	<xsl:include href="./Formatting.xsl" />
+	<xsl:include href="./Enums.xsl" />
 
-	<!-- Change these references to appropriate locale -->
-	<xsl:include href="./Formatting.en-CA.xsl" />
-	<xsl:include href="./Enums.en-CA.xsl" />
 	<xsl:template match="/">
+		<xsl:variable name="Labels" select="document(concat('Labels.HighSchoolTranscript.',$Locale,'.xml'))/Labels"/>
 		<html>
 			<head>
 				<!-- Change for the appropriate stylesheet location (only one reference required) -->
@@ -329,9 +329,9 @@
 																<span>Completed: <xsl:call-template name="Course.CourseDate" /></span>
 															</xsl:if>
 															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-																<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
+																<span>Supplemental Grade: <xsl:call-template name="Course.AcademicSupplementalGrade" /></span>
 																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																	<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																	<span>&#160;(Code: <xsl:call-template name="Course.MarkCodeType" />)</span>
 																</xsl:if>
 															</xsl:if>
 															<xsl:if test="CourseCreditValue/text() != ''">
@@ -420,9 +420,9 @@
 															<span>Completed: <xsl:call-template name="Course.CourseDate" /></span>
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-															<span>Supplemental Grade: <xsl:call-template name="MKS.AcademicGrade" /></span>
+															<span>Supplemental Grade: <xsl:call-template name="Course.AcademicGrade" /></span>
 															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																<span>&#160;(Code: <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																<span>&#160;(Code: <xsl:call-template name="Course.MarkCodeType" />)</span>
 															</xsl:if>
 														</xsl:if>
 														<xsl:if test="CourseCreditValue/text() != ''">

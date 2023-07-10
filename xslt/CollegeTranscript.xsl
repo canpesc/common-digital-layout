@@ -1,25 +1,26 @@
 <?xml version="1.0" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="UTF-8"/>
+	<xsl:param name="Locale">en-CA</xsl:param>
 	<xsl:include href="./TransmissionData.xsl" />
 	<xsl:include href="./Student.xsl" />
 	<xsl:include href="./Course.xsl" />
 	<xsl:include href="./AcademicSummary.xsl" />
 	<xsl:include href="./AcademicAward.xsl" />
-
-	<!-- Change these references to appropriate locale -->
-	<xsl:include href="./Formatting.fr-CA.xsl" />
-	<xsl:include href="./Enums.fr-CA.xsl" />
-	<xsl:variable name="Labels" select="document('Labels.CollegeTranscript.fr-CA.xml')/Labels"/>
+	<xsl:include href="./Formatting.xsl" />
+	<xsl:include href="./Enums.xsl" />
 
 	<xsl:template match="/">
+		<xsl:variable name="Labels" select="document(concat('Labels.CollegeTranscript.',$Locale,'.xml'))/Labels"/>
 		<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 		<html lang="en">
 			<head>
-				<title><xsl:call-template name="TransmissionData.SourceInstitutionName" /></title>
+				<title>
+					<xsl:call-template name="TransmissionData.SourceInstitutionName" />
+				</title>
 				<!-- Change for the appropriate stylesheet location (only one reference required) -->
-				<link rel="stylesheet" href="../../../xslt/styles/simple.css"  type="text/css" media="all"/>
-				<link rel="stylesheet" href="file:///C:/dev/git/common-digital-layout/xslt/styles/simple.css"  type="text/css" media="all"/>
+				<link rel="stylesheet" href="../../../xslt/styles/simple.css" type="text/css" media="all"/>
+				<link rel="stylesheet" href="file:///C:/dev/git/common-digital-layout/xslt/styles/simple.css" type="text/css" media="all"/>
 			</head>
 			<body>
 				<div id="transcript-container">
@@ -27,7 +28,8 @@
 						<div class="left-column">
 							<div id="destination-institution">
 								<h2 class="center"><xsl:value-of select="$Labels/Label[@key='Destination.Heading']"/></h2>
-								<p><span><xsl:value-of select="$Labels/Label[@key='Destination.InstitutionName']"/> <xsl:call-template name="TransmissionData.DestinationInstitutionName" /></span></p>
+								<h3 class="center"><xsl:value-of select="$Labels/Label[@key='Destination.InstitutionName']"/> <xsl:call-template name="TransmissionData.DestinationInstitutionName" /></h3>
+								<p>&#160;</p>
 								<xsl:choose>
 									<xsl:when test="//TransmissionData/Destination/Organization/CSIS/text() != ''">
 										<p><span><xsl:value-of select="$Labels/Label[@key='Destination.CSIS']"/> <xsl:value-of select="//TransmissionData/Destination/Organization/CSIS/text()"/></span></p>
@@ -45,7 +47,7 @@
 								</xsl:if>
 							</div>
 						</div>
-						<div class="centre-column  rounded-corners">
+						<div class="centre-column rounded-corners">
 							<div id="source-institution">
 								<!-- <img class="logo" src="" alt="" /> -->
 								<h1><xsl:call-template name="TransmissionData.SourceInstitutionName" /></h1>
@@ -90,7 +92,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="student-summary" class="row  rounded-corners">
+					<div id="student-summary" class="row rounded-corners">
 						<div id="student-information" class="left-column">
 							<h2><xsl:value-of select="$Labels/Label[@key='Student.Title']"/></h2>
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.LastName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'LastName'" /></xsl:call-template></span></p>
@@ -102,7 +104,7 @@
 								<p><span><xsl:value-of select="$Labels/Label[@key='Student.FormerLastName']"/> <xsl:call-template name="StudentInformation.getIndividualName"><xsl:with-param name="individualNameElement" select="'FormerLastName'" /></xsl:call-template></span></p>
 							</xsl:if>
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.DateOfBirth']"/> <xsl:call-template name="StudentInformation.DateOfBirth" /></span></p>
-							<p><span><xsl:value-of select="$Labels/Label[@key='Student.Gender']"/> <xsl:call-template name="StudentInformation.StudentGender"><xsl:with-param name="GenderMale" select="'Male'" /><xsl:with-param name="GenderFemale" select="'Female'" /><xsl:with-param name="GenderUnreported" select="'Unreported'" /></xsl:call-template></span></p>
+							<p><span><xsl:value-of select="$Labels/Label[@key='Student.Gender']"/><xsl:call-template name="Enums.GenderCode"><xsl:with-param name="v_enum" select="//*[local-name()='Student']/*[local-name()='Person']/*[local-name()='Gender']/*[local-name()='GenderCode']" /></xsl:call-template></span></p>
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.StudentNumber']"/> <xsl:call-template name="StudentInformation.StudentID" /></span></p>
 							<p><span><xsl:value-of select="$Labels/Label[@key='Student.GovernmentIdentifier']"/> <xsl:call-template name="StudentInformation.GovernmentId" /></span></p>
 						</div>
@@ -122,7 +124,7 @@
 												<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicAward.ProgramName']"/> <xsl:apply-templates select="AcademicProgramName"/></span>
 											</xsl:if>
 											<xsl:if test="AcademicProgramType/text() != ''">
-												<span> (<xsl:apply-templates select="AcademicProgramType"/>)</span>
+												<span> (<xsl:call-template name="Enums.AcademicProgramType"><xsl:with-param name="v_enum" select="AcademicProgramType/text()"/></xsl:call-template>)</span>
 											</xsl:if>
 											</p>
 										</xsl:for-each>
@@ -177,26 +179,22 @@
 								</xsl:if>
 							</xsl:for-each>
 							<xsl:for-each select="//*[local-name()='Student']/*[local-name()='AcademicRecord']/*[local-name()='AcademicSummary']">
-								<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
+								<xsl:if test="AcademicSummaryType/text() != 'Cumulative' or not(AcademicSummaryType)"> 
 									<div id="academic-summary-detail">
 									<xsl:attribute name="id">
 										<xsl:value-of select="concat('academic-summary-detail-',position())"/>
 									</xsl:attribute>
-									<h3>
-										<xsl:if test="AcademicSummaryLevel/text() != ''">
-											<xsl:value-of select="AcademicSummaryLevel/text()"/>
-										</xsl:if>
-										<xsl:if test="AcademicSummaryType/text() != '' and AcademicSummaryType/text() != 'UserDefined'">
-											&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)
-										</xsl:if>
-										&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.GPA']"/> <xsl:value-of select="GPA/GradePointAverage/text()"/>
-									</h3>
+									<xsl:if test="AcademicSummaryLevel/text() != ''">
+										<h3><xsl:call-template name="Enums.CourseCreditLevel"><xsl:with-param name="v_enum" select="AcademicSummaryLevel/text()"/></xsl:call-template>
+											&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.GPA']"/> <xsl:value-of select="GPA/GradePointAverage/text()"/>
+										</h3>
+									</xsl:if>
 									<xsl:for-each select="GPA">
 										<xsl:if test="GradePointAverage/text() != ''">
 											<xsl:if test="CreditHoursEarned/text() != ''">
 												<p><span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.GPACreditHoursEarned']"/> <xsl:value-of select="CreditHoursEarned/text()"/></span>
 												<xsl:if test="CreditUnit/text() != ''">
-													<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.GPACreditUnit']"/> <xsl:value-of select="CreditUnit/text()"/></span>
+													<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.GPACreditUnit']"/> <xsl:call-template name="Enums.CourseCreditUnits"><xsl:with-param name="v_enum" select="CreditUnit/text()"/></xsl:call-template></span>
 												</xsl:if>
 												</p>
 											</xsl:if>
@@ -205,6 +203,12 @@
 											</xsl:if>
 										</xsl:if>
 									</xsl:for-each>
+									<xsl:if test="Delinquencies/text() != ''">
+										<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.Delinquencies']"/> <xsl:call-template name="Enums.Delinquencies">
+											<xsl:with-param name="v_enum" select="Delinquencies/text()" />
+										</xsl:call-template>
+										</span>
+									</xsl:if>
 									<xsl:for-each select="NoteMessage">
 										<p><span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSummary.Note']"/> <xsl:value-of select="text()"/></span></p>
 									</xsl:for-each>
@@ -269,12 +273,12 @@
 													</td>
 													<td colspan="3">
 														<xsl:if test="CourseAcademicGradeStatusCode/text() != ''">
-															<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.Grade']"/> <xsl:call-template name="Course.GradeStatus" /></span><br/>
+															<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.Grade']"/>&#160;<xsl:call-template name="Course.GradeStatus" /></span><br/>
 														</xsl:if>
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
-															<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.SupplementalGrade']"/> <xsl:call-template name="MKS.AcademicGrade" /></span>
+															<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.SupplementalGrade']"/> <xsl:call-template name="Course.AcademicSupplementalGrade" /></span>
 																<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
-																	<span>&#160;(<xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.SupplementalGradeCode']"/> <xsl:call-template name="MKS.MarkCodeType" />)</span>
+																	<span>&#160;(<xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.SupplementalGradeCode']"/>&#160;<xsl:call-template name="Course.MarkCodeType" />)</span>
 																</xsl:if>
 														</xsl:if>
 													</td>
@@ -287,7 +291,8 @@
 														</xsl:if>
 														<xsl:if test="CourseCreditUnits/text() != ''">
 															<span>
-																&#160;&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CourseCreditUnits']"/> <xsl:call-template name="Course.CourseCreditUnits" />
+																<br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicRecord.Course.CourseCreditUnits']"/>
+																<xsl:call-template name="Course.CourseCreditUnits" />
 															</span>
 														</xsl:if>
 														<xsl:if test="CourseCreditLevel/text() != ''">
@@ -376,23 +381,19 @@
 										</xsl:if>
 									</xsl:for-each>
 									<xsl:for-each select="AcademicSummary">
-										<xsl:if test="AcademicSummaryType/text() != 'Cumulative'"> 
+										<xsl:if test="AcademicSummaryType/text() != 'Cumulative' or not(AcademicSummaryType)"> 
 											<div>
-												<h3>
-													<xsl:if test="AcademicSummaryLevel/text() != ''">
-														<xsl:value-of select="AcademicSummaryLevel/text()"/>
-													</xsl:if>
-													<xsl:if test="AcademicSummaryType/text() != '' and AcademicSummaryType/text() != 'UserDefined'">
-														&#160;(<xsl:value-of select="AcademicSummaryType/text()"/>)
-													</xsl:if>
-													&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.GPA']"/> <xsl:value-of select="GPA/GradePointAverage/text()"/>
-												</h3>
+												<xsl:if test="AcademicSummaryLevel/text() != ''">
+													<h3><xsl:call-template name="Enums.CourseCreditLevel"><xsl:with-param name="v_enum" select="AcademicSummaryLevel/text()"/></xsl:call-template>
+														&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.GPA']"/> <xsl:value-of select="GPA/GradePointAverage/text()"/>
+													</h3>
+												</xsl:if>
 												<xsl:for-each select="GPA">
 													<xsl:if test="GradePointAverage/text() != ''">
 														<xsl:if test="CreditHoursEarned/text() != ''">
 															<p><span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.GPACreditHoursEarned']"/> <xsl:value-of select="CreditHoursEarned/text()"/></span>
 															<xsl:if test="CreditUnit/text() != ''">
-																<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.GPACreditUnit']"/> <xsl:value-of select="CreditUnit/text()"/></span>
+																<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.AcademicSummary.GPACreditUnit']"/> <xsl:call-template name="Enums.CourseCreditUnits"><xsl:with-param name="v_enum" select="CreditUnit/text()"/></xsl:call-template></span>
 															</xsl:if>
 															</p>
 														</xsl:if>
@@ -496,11 +497,11 @@
 														<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGrade/text() != ''">
 															<span>
 																<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.SupplementalGrade']"/>
-																<xsl:call-template name="MKS.AcademicGrade" />
+																<xsl:call-template name="Course.AcademicSupplementalGrade" />
 															</span>
 															<xsl:if test="CourseSupplementalAcademicGrade/CourseSupplementalGrade/CourseAcademicSupplementalGradeScaleCode/text() != ''">
 																<span>
-																	&#160;(<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.SupplementalGradeCode']"/> <xsl:call-template name="MKS.MarkCodeType" />)
+																	&#160;(<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.SupplementalGradeCode']"/> <xsl:call-template name="Course.MarkCodeType" />)
 																</span>
 															</xsl:if>
 														</xsl:if>
@@ -510,7 +511,7 @@
 															<span><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseCreditBasis']"/> <xsl:call-template name="Course.BasisAcademicDescription" /></span>
 														</xsl:if>
 														<xsl:if test="CourseCreditUnits/text() != ''">
-															<span>&#160;&#160;<xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseCreditUnits']"/> <xsl:call-template name="Course.CourseCreditUnits" /></span>
+															<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseCreditUnits']"/> <xsl:call-template name="Course.CourseCreditUnits" /></span>
 														</xsl:if>	
 														<xsl:if test="CourseCreditLevel/text() != ''">
 															<span><br/><xsl:value-of select="$Labels/Label[@key='Student.AcademicSession.Course.CourseCreditLevel']"/> <xsl:call-template name="Course.CourseCreditLevel" /></span>
