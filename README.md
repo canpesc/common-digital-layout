@@ -6,7 +6,7 @@ A toolkit to help users of the PESC transcript standards generate layouts (i.e. 
 
 The goal of the CanPESC Common Digital Layout Working Group is to reduce the effort other institutions and transcript hubs to implement a transcript-to-pdf solution.  This is a common need for organizations adopting the PESC standards and it would be good to not have to reinvent the wheel!
 
-This repository demonstrates primarily taking an XML file and generating HTML using an XSL transform.  Combining HTML with CSS styling allows the user to create a visually appealing and printable document.
+This repository demonstrates primarily taking an XML file and generating HTML using an XSL transform.  Combining HTML with CSS styling allows the user to create a visually appealing and printable document in PDF form.
 
 See our whitepaper on the PESC.org website:
 
@@ -26,31 +26,7 @@ In order to demonstrate generating an HTML document from a transcript XML file, 
 
 ### Demonstrating PDF Render
 
-In order to demonstrate rendering of HTML to PDF, multiple tools can be used.  Here is a short list of tools available for this
-
-#### pdfshift.io
-
-> <https://pdfshift.io/>
->
-> Example usage:
-> `curl -d source="https://en.wikipedia.org/wiki/PDF" -d landscape="false" -d use_print="false" https://api.pdfshift.io/v2/convert/ -o wikipedia.pdf`
-
-#### pdfcrowd.com
-
-> <https://pdfcrowd.com/>
->
-> Example usage:
-> `curl -f -u demo:ce544b6ea52a5621fb9d55f8b542d14d -o "document.pdf" -F "url=https://example.com" https://api.pdfcrowd.com/convert/`
-
-#### wkhtmltopdf
-
-> <https://wkhtmltopdf.org/>
-
-Some additional reading on generating a PDF:
-
-- Using Javascript to generate PDF
-<https://www.codementor.io/@amehjoseph/convert-html-css-content-to-a-sleek-multiple-page-pdf-file-using-jspdf-javascript-library-eyyz74hci>
-- <https://www.smashingmagazine.com/2019/06/create-pdf-web-application/>
+This repository includes a sample command-line tool for transforming PESC XML transcripts into PDF by way of HTML.  For more details on this tool see its [README](./src/pesctranscriptconverter/Readme.md).
 
 ## Roadmap and Enhancements
 

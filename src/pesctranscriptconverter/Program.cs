@@ -175,8 +175,8 @@ namespace pesctranscriptconverter
 
         private static void PrintUsage()
         {
-            Console.WriteLine("Usage: pesctranscriptconvert [tohtml|topdf] inputfilepath outputfilepath [xsltfilepath]");
-            Console.WriteLine("Example: pesctranscriptconvert tohtml inputfile.xml outputfile.html transform.xslt");
+            Console.WriteLine("Usage: pesctranscriptconvert [tohtml|topdf] inputfilepath outputfilepath [xsltfilepath] [locale]");
+            Console.WriteLine("Example: pesctranscriptconvert tohtml inputfile.xml outputfile.html transform.xslt fr-CA");
             Console.WriteLine("Example: pesctranscriptconvert topdf inputfile.html outputfile.pdf");
         }
     }
