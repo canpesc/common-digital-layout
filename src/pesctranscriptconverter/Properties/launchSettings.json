@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "pesctranscriptconverter": {
-      "commandName": "Project",
-      "commandLineArgs": "tohtml \"C:\\dev\\git\\common-digital-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.xml\" \"C:\\dev\\git\\common-digital-layout\\samples\\College\\OntarioCollege\\CollegeTranscript.html\" \"C:\\dev\\git\\common-digital-layout\\xslt\\CollegeTranscript.xsl\""
-    }
-  }
-}
